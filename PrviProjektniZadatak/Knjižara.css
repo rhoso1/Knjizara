@@ -1,0 +1,116 @@
+body {
+        background-image: url("http://2.bp.blogspot.com/-XEPmjT2SYIU/Uh9OHVcrmPI/AAAAAAAADwM/A7zuy9oocXk/s1600/Background-Gold4.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+     }
+#Okvir {
+              width: auto;
+        }
+
+#Naslov h1   {
+               text-align:center;
+               font-size: 70pt;
+               font-family:monotype corsiva;
+               margin-top: -20px;
+
+            }
+
+#meni{
+        margin-top:-60px;
+        margin-bottom:-10px;
+        padding-bottom:0.5px;
+        
+
+}
+#meni ul li {
+                display: inline;
+                text-align: left;
+                font-size: 30pt;
+                font-style:oblique;
+                font-family:monotype corsiva;
+
+
+              }
+#meni ul a {
+                text-decoration: none;
+                color: #330000;
+                
+              }
+#Pribor {
+             background-color:#cd853f;
+             width:40%;
+             height:20%
+			 padding-top:20%;
+             padding-left:3%;
+             padding-right:-2%;
+             padding-bottom:-5%;
+             margin-left:8%;
+			 border-radius:25px;
+		
+           }
+
+#Pribor p {
+             text-align: left;
+             font-size: 20.5pt;
+			 font-family:monotype corsiva;
+           }
+#Pribor img {
+	       
+		   border-radius:25px;
+}
+#Copy {    
+            width:40%;
+            text-align:justify;
+            background-color:#cd853f;
+            padding-left:2%;
+            padding-right:60%;
+            padding-bottom:1%;
+            margin-top:-80%;
+            margin-left:105%;
+			border-radius:25px;
+          }
+
+#Copy p {
+             text-align: left;
+             font-size: 17pt;
+             margin-top:-77.5%;
+             padding-bottom:5%;
+			 font-family:monotype corsiva;
+
+             
+             }
+#Copy ul li {
+                text-align: left;
+                font-size: 17pt;
+                font-family:monotype corsiva;
+             }
+
+#Copy img {
+	       width:240%;
+		   height:40%;
+		   margin:auto;
+		   border-radius:25px;
+}
+#LOGO {
+	    height: 60px;
+        width: 60px;
+		background-color:transparent;
+        border-radius:50%;
+		margin-top:-56%;
+		margin-left:40px;
+		border:2px solid black;
+	   -webkit-animation: mymove 5s infinite;
+        animation: mymove 5s infinite;
+}
+@keyframes mymove {
+                    50% { 
+					     border:10px solid #800000;
+					     background-color:#D2B48C;
+						 }
+					    }
+#LOGO p {
+	     font-family:monotype corsiva;
+		 font-size:30pt;
+		 margin-top:10px;
+		 margin-left:10px;
+}

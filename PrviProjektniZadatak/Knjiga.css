@@ -1,0 +1,99 @@
+body {
+        background-image: url("http://2.bp.blogspot.com/-XEPmjT2SYIU/Uh9OHVcrmPI/AAAAAAAADwM/A7zuy9oocXk/s1600/Background-Gold4.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+     }
+#Okvir {
+              width: auto;
+        }
+
+#Naslov h1   {
+               text-align:center;
+               font-size: 70pt;
+               font-family:monotype corsiva;
+               margin-top: -20px;
+
+            }
+
+#meni{
+        margin-top:-60px;
+        margin-bottom:-10px;
+        padding-bottom:0.5px;
+        
+
+}
+#meni ul li {
+                display: inline;
+                text-align: left;
+                font-size: 30pt;
+                font-style:oblique;
+                font-family:monotype corsiva;
+
+
+              }
+#meni ul a {
+                text-decoration: none;
+                color: #330000;
+                
+              }
+#Tabela {
+         font-family:monotype corsiva;
+         border-collapse: collapse;
+         width: 100%;
+		 border-radius:25px;
+		 
+		 
+      }
+
+#Tabela td, #Tabela th {
+                       border: 5px solid black;
+                       text-align:center;
+                       padding: 8px;
+					   font-size:20pt;
+                    }
+
+#Tabela tr:nth-child(even)
+                                                 {
+						  background-color:#cd853f;
+						 }
+
+#Tabela tr:hover {
+	              background-color:#ddd;
+			    }
+
+#Tabela th {
+             padding-top: 12px;
+             padding-bottom: 12px;
+             background-color:#8b4513;
+             color:black;
+			 font-size:20pt;
+			 width:10%;
+          }	
+#Kraj p{
+	      font-family:monotype corsiva;
+		  text-align:center;
+		  font-size:20pt;
+       }
+	   #LOGO {
+	    height: 60px;
+        width: 60px;
+		background-color:transparent;
+        border-radius:50%;
+		margin-top:-45.5%;
+		margin-left:40px;
+		border:2px solid black;
+	   -webkit-animation: mymove 5s infinite;
+        animation: mymove 5s infinite;
+}
+@keyframes mymove {
+                    50% { 
+					     border:10px solid #800000;
+					     background-color:#D2B48C;
+						 }
+					    }
+#LOGO p {
+	     font-family:monotype corsiva;
+		 font-size:30pt;
+		 margin-top:10px;
+		 margin-left:10px;
+}
