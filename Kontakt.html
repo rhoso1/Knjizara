@@ -3,7 +3,7 @@
 <HEAD>
 <TITLE>eBook knjizara</TITLE>
 
-<link rel="stylesheet" type="text/css" href="Kontakt.css">
+<link rel="stylesheet" type="text/css" href="stil.css">
 <META http-equiv="Content-Type" content="text/html; charset=utf-8">
 </HEAD>
 <BODY>
@@ -22,34 +22,36 @@
         <li><a href="Kontakt.html">Kontakt</a></li>
         </ul>
         </div>
-       <div id = "Okvir">
+       <div id = "OkvirKontakt">
            <div id = "Forma">
               <form>
                 <div id = "txt">
                 <label>E-mail: </label>
                 <br></br>
-                <input type="text" value="E-mail">
+                <input type="email" name="email" required>
                 <br></br>
                 <label>Broj telefona: </label>
                 <br></br>
-                <input type="text" value="Broj telefona">
+                <input type="tel" name="tel" id="tel" required>
                 <br></br>
                 <label>Poruka: </label>
                 <br></br>
-                <input type="textarea" value="Poruka">
+                <textarea rows="4" cols="35"></textarea>
                 <br></br>
                 <br></br>
 
             </div>
-              <input type="button" value="Pošalji">
+			<div id="btn">
+              <input type="submit" value="Pošalji">
+			  </div>
              </form>
           </div>
        </div>
  </div>
- <div id="Kraj">
+ <div id="KrajKontakt">
   <p>Kontaktirajte nas odmah i zavirite u svijet knjiga...</p>
   </div>
-  <div id="LOGO">
+  <div id="LOGOKontakt">
   <p>B</p>
   </div>
 </BODY>

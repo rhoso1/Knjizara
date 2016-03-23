@@ -1,26 +1,21 @@
 body {
-        background-image: url("http://2.bp.blogspot.com/-XEPmjT2SYIU/Uh9OHVcrmPI/AAAAAAAADwM/A7zuy9oocXk/s1600/Background-Gold4.jpg");
+        background-image: url("Slike/background.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
      }
-#Okvir {
-              width: auto;
-        }
 
 #Naslov h1   {
                text-align:center;
                font-size: 70pt;
                font-family:monotype corsiva;
-               margin-top: -20px;
+               margin-top: -2vw;
 
             }
 
 #meni{
-        margin-top:-60px;
-        margin-bottom:-10px;
-        padding-bottom:0.5px;
-        
-
+        margin-top:-6vw;
+        padding-bottom:0.3vw;
+		padding-top:0.3vw;
 }
 #meni ul li {
                 display: inline;
@@ -28,8 +23,9 @@ body {
                 font-size: 30pt;
                 font-style:oblique;
                 font-family:monotype corsiva;
-
-
+				margin:4vw;
+				margin-left:6vw;
+				margin-top:-4vw;
               }
 #meni ul a {
                 text-decoration: none;
@@ -69,31 +65,31 @@ body {
 			 font-size:20pt;
 			 width:10%;
           }	
-#Kraj p{
+#KrajKnjige p{
 	      font-family:monotype corsiva;
 		  text-align:center;
 		  font-size:20pt;
        }
-	   #LOGO {
-	    height: 60px;
-        width: 60px;
+#LOGOKnjige {
+	    height:4vw;
+        width:4vw;
 		background-color:transparent;
         border-radius:50%;
-		margin-top:-45.5%;
-		margin-left:40px;
-		border:2px solid black;
+		margin-top:-45.5vw;
+		margin-left:5vw;
+		border:0.1vw solid black;
 	   -webkit-animation: mymove 5s infinite;
         animation: mymove 5s infinite;
 }
 @keyframes mymove {
                     50% { 
-					     border:10px solid #800000;
+					     border:1vw solid #800000;
 					     background-color:#D2B48C;
 						 }
 					    }
-#LOGO p {
+#LOGOKnjige p {
 	     font-family:monotype corsiva;
 		 font-size:30pt;
-		 margin-top:10px;
-		 margin-left:10px;
+		 margin-top:-0.1px;
+		 margin-left:0.7vw;
 }

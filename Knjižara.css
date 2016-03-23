@@ -1,116 +1,175 @@
 body {
-        background-image: url("http://2.bp.blogspot.com/-XEPmjT2SYIU/Uh9OHVcrmPI/AAAAAAAADwM/A7zuy9oocXk/s1600/Background-Gold4.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-image:url("Slike/background.jpg");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
      }
-#Okvir {
-              width: auto;
-        }
 
 #Naslov h1   {
                text-align:center;
-               font-size: 70pt;
+               font-size:70pt;
                font-family:monotype corsiva;
-               margin-top: -20px;
+               margin-top:-2vw;
 
             }
 
 #meni{
-        margin-top:-60px;
-        margin-bottom:-10px;
-        padding-bottom:0.5px;
-        
-
+        margin-top:-6vw;
+        padding-bottom:0.3vw;
+		padding-top:0.3vw;
 }
 #meni ul li {
-                display: inline;
-                text-align: left;
-                font-size: 30pt;
+                display:inline;
+                text-align:left;
+                font-size:30pt;
                 font-style:oblique;
                 font-family:monotype corsiva;
-
-
+				margin:4vw;
+				margin-left:6vw;
+				margin-top:-4vw;
               }
 #meni ul a {
-                text-decoration: none;
-                color: #330000;
+                text-decoration:none;
+                color:#330000;
                 
               }
-#Pribor {
-             background-color:#cd853f;
-             width:40%;
-             height:20%
-			 padding-top:20%;
-             padding-left:3%;
-             padding-right:-2%;
-             padding-bottom:-5%;
-             margin-left:8%;
-			 border-radius:25px;
-		
-           }
 
-#Pribor p {
-             text-align: left;
-             font-size: 20.5pt;
-			 font-family:monotype corsiva;
-           }
-#Pribor img {
-	       
-		   border-radius:25px;
-}
-#Copy {    
-            width:40%;
-            text-align:justify;
-            background-color:#cd853f;
-            padding-left:2%;
-            padding-right:60%;
-            padding-bottom:1%;
-            margin-top:-80%;
-            margin-left:105%;
-			border-radius:25px;
-          }
 
-#Copy p {
-             text-align: left;
-             font-size: 17pt;
-             margin-top:-77.5%;
-             padding-bottom:5%;
-			 font-family:monotype corsiva;
-
-             
-             }
-#Copy ul li {
-                text-align: left;
-                font-size: 17pt;
-                font-family:monotype corsiva;
-             }
-
-#Copy img {
-	       width:240%;
-		   height:40%;
-		   margin:auto;
-		   border-radius:25px;
-}
 #LOGO {
-	    height: 60px;
-        width: 60px;
+	    height:4vw;
+        width:4vw;
 		background-color:transparent;
         border-radius:50%;
-		margin-top:-56%;
-		margin-left:40px;
-		border:2px solid black;
-	   -webkit-animation: mymove 5s infinite;
-        animation: mymove 5s infinite;
+		margin-top:-47vw;
+		margin-left:5vw;
+		border:0.1vw solid black;
+	   -webkit-animation:mymove 5s infinite;
+        animation:mymove 5s infinite;
 }
 @keyframes mymove {
                     50% { 
-					     border:10px solid #800000;
+					     border:1vw solid #800000;
 					     background-color:#D2B48C;
 						 }
 					    }
 #LOGO p {
 	     font-family:monotype corsiva;
 		 font-size:30pt;
-		 margin-top:10px;
-		 margin-left:10px;
+		 margin-top:0vw;
+		 margin-left:0.7vw;		 
+}
+#red {
+	background-color:#CC9966;
+	border:1vw double #331100;
+	height:16vw;
+	width:33vw;
+	margin-left:14.5vw;
+	margin-top:-1vw;
+}
+#red h1 {
+		 font-family:monotype corsiva;
+		 font-size:15pt;
+		 margin-top:-0.1vw;
+		 margin-left:1vw;
+}
+#red p {
+		 font-family:monotype corsiva;
+		 font-size:12pt;
+		 margin-top:-1.1vw;
+		 margin-left:1vw;
+}
+#okvir {
+	border:0.1vw solid #331100;
+	border-radius:2vw;
+	background-color:transparent;
+	background-image:url("Slike/pribor5.jpg");
+	background-repeat:no-repeat;
+	height:11.5vw;
+	width:30vw;
+	margin-left:1vw;
+	margin-top:-0.5vw;
+}
+#redd {
+	background-color:#CC9966;
+	border:1vw double #331100;
+	height:16vw;
+	width:33vw;
+	margin-left:14.5vw;
+	margin-top:0.5vw;
+}
+#redd h1 {
+		 font-family:monotype corsiva;
+		 font-size:15pt;
+		 margin-top:-0.1vw;
+		 margin-left:1vw;
+}
+#redd p {
+		 font-family:monotype corsiva;
+		 font-size:12pt;
+		 margin-top:-1.1vw;
+		 margin-left:1vw;
+}
+#ok {
+	border:0.1vw solid #331100;
+	border-radius:2vw;
+	background-color:transparent;
+	background-image:url("Slike/cestitke1.jpg");
+	background-repeat:no-repeat;
+	height:11.5vw;
+	width:30vw;
+	margin-left:1.5vw;
+	margin-top:-0.5vw;
+}
+#kolona {
+	background-color:#CC9966;
+	border:1vw double #331100;
+	height:16vw;
+	width:33vw;
+	margin-left:50vw;
+	margin-top:-36.3vw;
+	
+}
+#kolona h1 {
+		 font-family:monotype corsiva;
+		 font-size:15pt;
+		 margin-top:-0.1vw;
+		 margin-left:1vw;
+}
+#kolona p {
+		 font-family:monotype corsiva;
+		 font-size:12pt;
+		 margin-top:-1.1vw;
+		 margin-left:1vw;
+		 margin-top:-1vw;
+}
+#okv {
+	border:0.1vw solid #331100;
+	border-radius:2vw;
+	background-color:transparent;
+	background-image:url("Slike/foto4.jpg");
+	background-repeat:no-repeat;
+	height:11.5vw;
+	width:30vw;
+	margin-left:1.5vw;
+	margin-top:-0.5vw;
+}
+#kolonaa {
+	background-color:#CC9966;
+	border:1vw double #331100;
+	height:16vw;
+	width:33vw;
+	margin-left:50vw;
+	margin-top:0.5vw;
+
+}
+#kolonaa h1 {
+	     font-family:monotype corsiva;
+		 font-size:15pt;
+		 margin-top:-0.1vw;
+		 margin-left:1vw;
+}
+#kolonaa p {
+		 font-family:monotype corsiva;
+		 font-size:15pt;
+	     text-align:center;
+		 margin-top:5vw;
 }

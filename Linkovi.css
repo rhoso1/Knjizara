@@ -1,26 +1,21 @@
 body {
-        background-image: url("http://2.bp.blogspot.com/-XEPmjT2SYIU/Uh9OHVcrmPI/AAAAAAAADwM/A7zuy9oocXk/s1600/Background-Gold4.jpg");
+        background-image: url("Slike/background.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
      }
-#Okvir {
-              width: auto;
-        }
 
 #Naslov h1   {
                text-align:center;
                font-size: 70pt;
                font-family:monotype corsiva;
-               margin-top:-2%;
+               margin-top: -2vw;
 
             }
 
 #meni{
-        margin-top:-60px;
-        margin-bottom:-10px;
-        padding-bottom:0.5px;
-        
-
+        margin-top:-6vw;
+        padding-bottom:0.3vw;
+		padding-top:0.3vw;
 }
 #meni ul li {
                 display: inline;
@@ -28,76 +23,76 @@ body {
                 font-size: 30pt;
                 font-style:oblique;
                 font-family:monotype corsiva;
-
-
+				margin:4vw;
+				margin-left:6vw;
+				margin-top:-4vw;
               }
 #meni ul a {
-                text-decoration: none;
-                color: #330000;
-                
-              }
-			  #Link p{
-	      font-family:monotype corsiva;
-		  text-indent:50px;
-		  font-size:30pt;
-       }
-	  #Link ul li a {
-                text-decoration: none;
-				color:black;
-                
-              } 
-			  
- #Link1 li {
-	list-style-image:none;
-	font-size:25pt;
-	margin-left:50px;
-	font-family:monotype corsiva;
-}
-#Link1 li a:hover 
-                              {	               
-				list-style-image: url("http://www.clearlysurely.com/img/facebook-icon-small.png");		  
-               }
-#Link2 li {
-	list-style-image:none;
-	font-size:25pt;
-	margin-left:50px;
-	font-family:monotype corsiva;
-}
-#Link2 li a:hover 
-                              {	               
-			    list-style-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAYaWtfgfZyjI7opnXEjkQcLBCGfr1Bs0tMromVIpXpKFVOh3VkBdvlA");	  
-               }
-#Link3 li {
-	list-style-image:none;
-	font-size:25pt;
-	margin-left:50px;
-	font-family:monotype corsiva;
-}
-
-#Link3 li a:hover 
-                              {	               
-			    list-style-image:url("https://online.kitco.com/images/social/social_icons_instagram_mini.png");	  
-               } */
+           text-decoration: none;
+           color: #330000;
+         }
 #LOGO {
-	    height: 60px;
-        width: 60px;
+	    height:4vw;
+        width:4vw;
 		background-color:transparent;
         border-radius:50%;
-		margin-top:-48%;
-		margin-left:40px;
-		border:2px solid black;
-	   -webkit-animation: mymove 5s infinite;
-        animation: mymove 5s infinite;
+		margin-top:-29vw;
+		margin-left:5vw;
+		border:0.1vw solid black;
+		position:absolute;
+	   -webkit-animation:mymove 5s infinite;
+        animation:mymove 5s infinite;
 }
 @keyframes mymove {
                     50% { 
-					     border:10px solid #800000;
+					     border:1vw solid #800000;
 					     background-color:#D2B48C;
 						 }
-					    
+					    }
 #LOGO p {
 	     font-family:monotype corsiva;
 		 font-size:30pt;
-		 margin-top:10px;
-		 margin-left:10px;
+		 margin-top:0vw;
+		 margin-left:0.7vw;		 
 }
+#Link p{
+	    font-family:monotype corsiva;
+		font-size:25pt;
+	    margin-left:5vw;
+}
+#Link ul li a {
+            text-decoration:none;
+			color:black;
+          } 
+			  
+ #Link1 li {
+	list-style:none;
+	font-size:25pt;
+	margin-left:5vw;
+	font-family:monotype corsiva;
+}
+#Link1 li:hover 
+                              {	               
+				list-style:url("Slike/facebook.png");		  
+               }
+#Link2 li {
+	list-style:none;
+	font-size:25pt;
+	margin-left:5vw;
+	font-family:monotype corsiva;
+}
+#Link2 li:hover 
+                              {	               
+			    list-style-image:url("Slike/twitter.png");	  
+               }
+#Link3 li {
+	list-style:none;
+	font-size:25pt;
+	margin-left:5vw;
+	font-family:monotype corsiva;
+}
+
+#Link3 li:hover 
+                              {	               
+			    list-style-image:url("Slike/instagram.png");	  
+               } 
