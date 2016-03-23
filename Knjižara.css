@@ -2,8 +2,9 @@ body {
         background-image:url("Slike/background.jpg");
         background-repeat:no-repeat;
         background-attachment:fixed;
-        overflow-x:hidden;
-	overflow-y:hidden;
+		overflow-x:hidden;
+		overflow-y:hidden;
+		display:block;
      }
 
 #Naslov h1   {
