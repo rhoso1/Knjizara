@@ -32,11 +32,9 @@
 				}
 			}
 
-			if($_ok) {
-				/*Nije mi nikako moglo otvoriti sa header("admin.php")*/
-				echo file_get_contents("admin.php");
-				exit();
-				
+			if($_ok)
+				{
+                  header("Location:admin.php");					
 			}
 			?>
      <div id = "Naslov">

@@ -22,49 +22,52 @@
              </ul>
             </div>
 			 
-			 <select id="novosti" onchange="Promijeni()">
-			 <option value="SveNovosti" id ="sve">Sve Novosti</option>
+		 	 <select id = "novostiSelect" onchange="Promijeni()">
+			 <option value="sve" id ="sve">Sve Novosti</option>
 			 <option value="danasnje" id ="danasnje">Današnje novosti</option>
 			 <option value="sedmicne" id="sedmicne">Sedmične novosti</option>
 			 <option value="mjesecne" id="mjesecne">Mjesečne novosti</option>
 			 </select>
 			 
-
-	<div id="red">
-	<h1 onmouseover="Objava()">Novo u našoj ponudi</h1>
-	<p>Školski pribor po izuzetno niskim cijenama...
-	<br>
-	<label id="redObjava"></label>
-	</br>
-	</p>
-	 <div id="okvir"></div>
-	</div>
-	<div id="redd">
-	<h1 onmouseover="Objava()">Novo u našoj ponudi</h1>
-	<p>Čestitke za sve prilike...
-	<br>
-	<label id="reddObjava"></label>
-	</br>
-	</p>
-	<div id="ok"></div>
-	</div>
-	<div id="kolona">
-	<h1 onmouseover="Objava()">Novo u našoj ponudi</h1>
-	<p>Izrada albuma sa fotografijama po Vašoj želji...
-	<br>
-	<label id="kolonaObjava"></label>
-	</br>
-	</p>
-	<div id="okv"></div>
-	</div>
-	<div id="kolonaa">
-	<h1 onmouseover="Objava()">I još mnogo toga...</h1>
-	<p>Dođite i uvjerite se sami. Svakog radnog dana u periodu od 09:00 do 21:00 u ulici Zmaja od Bosne bb, Sarajevo 
-	<br>
-	<label id="kolonaaObjava"></label>
-	</br>
-	</p>
-	</div>
+			 <div id = "abecednoSortiranje">
+			 <form>
+             <input type="checkbox" name = "sortitano">Sortiraj abecedno<br>
+             <input type="submit" name = "submit" value = "OK" onclick = "SortirajAbecedno()">	
+             </form>
+			 </div>
+             <?php
+			$_autor="";
+			$_naziv="";
+			$_novost="";
+			$_datum="";
+			
+			 $_file = fopen("NovostiCSVsaForme.csv","r");	
+             while (!feof($_file) )	
+             {
+			   $_text = fgetcsv($_file);
+			   $_autor = $_text[1];
+			   $_naziv = $_text[2];
+			   $_novost = $_text[3];
+			   $_datum = $_text[4];
+			 }			   
+			  echo "<div class ='Glavno' name ='Glavno'>";
+			  echo "<div class='Novo'>";
+			  echo "<div class = 'vrijeme'>";
+              echo "<h4>"print_r($_datum); echo"</h4>";
+			  echo"</div>"
+			  echo "<div class = 'nazivNovosti'>";
+              echo "<h3>"print_r($_naziv); echo"</h3>";
+			  echo"</div>"
+			  echo "<div class = 'nazivAutora'>";
+              echo "<h4>"print_r($_autor); echo"</h4>";
+			  echo"</div>"
+			  echo "<div class = 'objavljenaNovost'>";
+              echo "<p>"print_r($_autor); echo"</p>";
+			  echo"</div>"
+			  <echo"</div>"
+		<echo"</div>"
+     fclose($_file);
+?>
   <div id="LOGOKnjizare">
   <p>B</p>
   </div>

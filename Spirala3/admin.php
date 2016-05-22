@@ -11,8 +11,11 @@
 <?php
    if (isset($_POST["submit"]))
    {
-	   echo file_get_contents("DodajNovosti.php");
-				exit();
+	  header("Location:DodajNovosti.php");
+   }
+   if (isset($_POST["Odjavasubmit"]))
+   {
+	  header("Location:Login.php");
    }
    
 ?>

@@ -3,7 +3,6 @@ body {
         background-repeat:no-repeat;
         background-attachment:fixed;
 		overflow-x:hidden;
-		overflow-y:hidden;
 		display:block;
      }
 
@@ -27,7 +26,7 @@ body {
                 font-size:30pt;
                 font-style:oblique;
                 font-family:monotype corsiva;
-				margin-left:6vw;
+				margin-left:9.5vw;
 				margin-top:-4vw;
 		
               }
@@ -43,11 +42,12 @@ body {
         width:4vw;
 		background-color:transparent;
         border-radius:50%;
-		margin-top:-48vw;
+		margin-top:-37vw;
 		margin-left:5vw;
 		border:0.1vw solid black;
 	   -webkit-animation:mymove 5s infinite;
         animation:mymove 5s infinite;
+		position:fixed;
 }
 @keyframes mymove {
                     50% { 
@@ -61,160 +61,71 @@ body {
 		 margin-top:0vw;
 		 margin-left:0.7vw;		 
 }
-#red {
-	background-color:#CC9966;
-	border:1vw double #331100;
-	height:16vw;
-	width:33vw;
-	margin-left:14.5vw;
-	margin-top:-1vw;
+#novostiSelect{
+	      background-image:url("Slike/background.jpg");
+          background-repeat:no-repeat;
+          background-attachment:fixed;
+		  border:0.5vw double black;
+		  margin-top:-1vw;
+		  margin-left:8vw;
+		  font-size:2.5vw;
+		  font-family:monotype corsiva;
+		  
 }
-#red h1 {
-		 font-family:monotype corsiva;
-		 font-size:15pt;
-		 margin-top:-0.1vw;
-		 margin-left:1vw;
-}
-#red p {
-		 font-family:monotype corsiva;
-		 font-size:12pt;
-		 margin-top:-1.1vw;
-		 margin-left:1vw;
-}
-#okvir {
-	border:0.1vw solid #331100;
-	border-radius:2vw;
-	background-color:transparent;
-	background-image:url("Slike/pribor5.jpg");
-	background-repeat:no-repeat;
-	height:10vw;
+.Novo
+{
+	display:inline-block;
+	height:20vw;
 	width:30vw;
-	margin-left:1vw;
-	margin-top:-0.5vw;
-}
-#redd {
-	background-color:#CC9966;
 	border:1vw double #331100;
-	height:16vw;
-	width:33vw;
-	margin-left:14.5vw;
-	margin-top:0.5vw;
-}
-#redd h1 {
-		 font-family:monotype corsiva;
-		 font-size:15pt;
-		 margin-top:-0.1vw;
-		 margin-left:1vw;
-}
-#redd p {
-		 font-family:monotype corsiva;
-		 font-size:12pt;
-		 margin-top:-1.1vw;
-		 margin-left:1vw;
-}
-#ok {
-	border:0.1vw solid #331100;
-	border-radius:2vw;
-	background-color:transparent;
-	background-image:url("Slike/cestitke1.jpg");
-	background-repeat:no-repeat;
-	height:10vw;
-	width:30vw;
-	margin-left:1.5vw;
-	margin-top:-0.5vw;
-}
-#kolona {
 	background-color:#CC9966;
-	border:1vw double #331100;
-	height:16vw;
-	width:33vw;
-	margin-left:50vw;
-	margin-top:-36.3vw;
-	
+	margin-left:8vw;
+	margin-top:2vw;
+	background-size: contain;
+	overflow: hidden;
 }
-#kolona h1 {
-		 font-family:monotype corsiva;
-		 font-size:15pt;
-		 margin-top:-0.1vw;
-		 margin-left:1vw;
+.Novo:hover {
+	              background-color:#ddd;
+			    }
+h3.nazivNovosti {
+	font-family:monotype corsiva;
+	font-size:2vw;
+	text-align:left;
+	width:2vw;
 }
-#kolona p {
-		 font-family:monotype corsiva;
-		 font-size:12pt;
-		 margin-top:-1.1vw;
-		 margin-left:1vw;
-		 margin-top:-1vw;
+h4.nazivAutora {
+	             font-family:monotype corsiva;
+	             font-size:1vw;
+	             text-align:left;
+				 width:2vw;
 }
-#okv {
-	border:0.1vw solid #331100;
-	border-radius:2vw;
-	background-color:transparent;
-	background-image:url("Slike/foto4.jpg");
-	background-repeat:no-repeat;
-	height:10vw;
-	width:30vw;
-	margin-left:1.5vw;
-	margin-top:-0.5vw;
+h4.vrijeme {
+	             font-family:monotype corsiva;
+	             font-size:1vw;
+	             text-align:left;
+				 width:2vw;
 }
-#kolonaa {
-	background-color:#CC9966;
-	border:1vw double #331100;
-	height:16vw;
-	width:33vw;
-	margin-left:50vw;
-	margin-top:0.5vw;
+p.objavljenaNovost 
+{
+	             position: relative;
+                 font-family:monotype corsiva;
+	             font-size:2vw;
+	             text-align:left;
+				 width:8wv;
+				 width:25vw
+}
+#abecednoSortiranje
+{
+          background-image:url("Slike/background.jpg");
+          background-repeat:no-repeat;
+          background-attachment:fixed;
+		  margin-top:-3.5vw;
+		  margin-left:27vw;
+		  font-size:1.5vw;
+		  font-family:monotype corsiva;
+		  width:15vw;
+}
 
-}
-#kolonaa h1 {
-	     font-family:monotype corsiva;
-		 font-size:15pt;
-		 margin-top:-0.1vw;
-		 margin-left:1vw;
-}
-#kolonaa p {
-		 font-family:monotype corsiva;
-		 font-size:15pt;
-	     text-align:center;
-		 margin-top:5vw;
-}
-body {
-        background-image: url("Slike/background.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-		overflow-x:hidden;
-		overflow-y:hidden;
-		display:block;
-     }
-
-#Naslov h1   {
-               text-align:center;
-               font-size: 70pt;
-               font-family:monotype corsiva;
-               margin-top: -2vw;
-
-            }
-
-#meni{
-        margin-top:-6vw;
-        padding-bottom:0.3vw;
-		padding-top:0.3vw;
-}
-#meni ul li {
-                display: inline;
-                text-align: left;
-                font-size: 30pt;
-                font-style:oblique;
-                font-family:monotype corsiva;
-				margin:4vw;
-				margin-left:6vw;
-				margin-top:-4vw;
-              }
-#meni ul a {
-                text-decoration: none;
-                color: #330000;
-				margin:-1.5vw;
-                
-              }
 #Tabela {
          font-family:monotype corsiva;
          border-collapse: collapse;
@@ -276,43 +187,7 @@ body {
 		 margin-top:-0.1px;
 		 margin-left:0.7vw;
 }
-body {
-        background-image: url("Slike/background.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-		overflow-x:hidden;
-		overflow-y:hidden;
-		display:block;
-     }
 
-#Naslov h1   {
-               text-align:center;
-               font-size: 70pt;
-               font-family:monotype corsiva;
-               margin-top: -2vw;
-
-            }
-
-#meni{
-        margin-top:-6vw;
-        padding-bottom:0.3vw;
-		padding-top:0.3vw;
-}
-#meni ul li {
-                display: inline;
-                text-align: left;
-                font-size: 30pt;
-                font-style:oblique;
-                font-family:monotype corsiva;
-				margin:4vw;
-				margin-left:6vw;
-				margin-top:-4vw;
-              }
-#meni ul a {
-           text-decoration: none;
-           color: #330000;
-		   margin:-1.5vw;
-         }
 #LOGO {
 	    height:4vw;
         width:4vw;
@@ -378,43 +253,7 @@ body {
                               {	               
 			    list-style-image:url("Slike/instagram.png");	  
                } 
-body {
-        background-image: url("Slike/background.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-		overflow-x:hidden;
-		overflow-y:hidden;
-		display:block;
-     }
 
-#Naslov h1   {
-               text-align:center;
-               font-size: 70pt;
-               font-family:monotype corsiva;
-               margin-top: -2vw;
-
-            }
-
-#meni{
-        margin-top:-6vw;
-        padding-bottom:0.3vw;
-		padding-top:0.3vw;
-}
-#meni ul li {
-                display: inline;
-                text-align: left;
-                font-size: 30pt;
-                font-style:oblique;
-                font-family:monotype corsiva;
-				margin:4vw;
-				margin-left:6vw;
-				margin-top:-4vw;
-              }
-#meni ul a {
-                text-decoration: none;
-                color: #330000;
-                margin:-1.5vw;
-              }
 #oNama {
 	background-color:transparent;
 	height:27vw;
@@ -465,44 +304,7 @@ body {
 		 margin-top:0.1vw;
 		 margin-left:1vw;
 }
-body {
-        background-image: url("Slike/background.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-		overflow-x:hidden;
-		overflow-y:hidden;
-		display:block;
-     }
 
-#Naslov h1   {
-               text-align:center;
-               font-size: 70pt;
-               font-family:monotype corsiva;
-               margin-top: -2vw;
-
-            }
-
-#meni{
-        margin-top:-6vw;
-        padding-bottom:0.3vw;
-		padding-top:0.3vw;
-}
-#meni ul li {
-                display: inline;
-                text-align: left;
-                font-size: 30pt;
-                font-style:oblique;
-                font-family:monotype corsiva;
-				margin:4vw;
-				margin-left:6vw;
-				margin-top:-4vw;
-              }
-#meni ul a {
-                text-decoration: none;
-                color: #330000;
-				margin:-1.5vw;
-                
-              }
 #OkvirKontakt
            {
         margin:auto;
@@ -562,17 +364,7 @@ body {
 		 margin-top:0vw;
 		 margin-left:0.8vw;		 
 }
-#novosti{
-	      background-image:url("Slike/background.jpg");
-          background-repeat:no-repeat;
-          background-attachment:fixed;
-		  border:0.1vw solid black;
-		  margin-top:-42vw;
-		  margin-left:80vw;
-		  font-size:2.5vw;
-		  font-family:monotype corsiva;
-}
-#DnevneNaslov{
+/* #DnevneNaslov{
 	         	border:0.5vw double black;
 				margin-top:-1.5vw;
 				height:35vw;
@@ -667,7 +459,7 @@ body {
 }
 #SveNaslov p:hover {
 	              background-color:#ddd;
-			    }
+			    } */
 
 #LOGOLogin {
 	    height:4vw;
@@ -777,7 +569,7 @@ body {
              padding:1vw;
              background-color:#996633;
 		     border-radius:2vw;
-		     margin-top:10vw;
+		     margin-top:-1vw;
 }
 #novoForma label{
 	         text-align: left;
