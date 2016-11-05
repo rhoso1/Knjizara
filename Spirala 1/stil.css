@@ -1,0 +1,341 @@
+
+body {
+        background-image:url("Slike/background.jpg");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+		overflow-x:hidden;
+		display:block;
+     }
+#Naslov h1   {
+            text-align:center;
+            font-size:7vw;
+            font-family:monotype corsiva;
+            margin-top:-1.3vw; 
+           }
+
+#meni{
+       margin-top:-6vw;
+       padding-bottom:0.3vw;
+	   padding-top:0.3vw;
+		
+     }
+#meni ul li {
+                display:inline;
+                text-align:left;
+                font-size:3.5vw;
+                font-style:oblique;
+                font-family:monotype corsiva;
+				margin:2.5vw;
+				margin-left:6vw;
+				margin-top:-4vw;
+         }
+#meni ul a {
+                text-decoration:none;
+                color:#27190c;
+                
+         }
+div.NovostLijevo {
+	             background-color:#CC9966;
+	             border:1vw double #331100;
+	             height:31vw;
+	             width:35vw;
+	             margin-left:14vw;
+	             margin-top:1vw;
+               }
+		
+div.NovostDesno{
+	           background-color:#CC9966;
+	           border:1vw double #331100;
+	           height:31vw;
+	           width:35vw;
+	           margin-left:51.8vw;
+	           margin-top:-33vw;
+            }
+.NovostLijevo:first-child {
+	                       margin-left:0vw;
+                          }
+						  
+.NovostLijevo:last-child {
+	                       margin-right:0vw;
+                         }
+			
+h1.Lijevo {
+	      font-family:monotype corsiva;
+		  font-size:2vw;
+		  margin-top:0.2vw;
+		  margin-left:1vw;
+        }
+p.Lijevo {
+		 font-family:monotype corsiva;
+		 font-size:1.5vw;
+		 margin-top:-1.1vw;
+		 margin-left:1vw;
+        }
+div.okvir{
+	      border:0.1vw solid #331100;
+	      border-radius:2vw;
+	      background-color:transparent;
+	      background-image:url("Slike/pribor5.jpg");
+	      background-repeat:no-repeat;
+	      height:25vw;
+	      width:30vw;
+	      margin:auto;
+	      margin-top:-1.3vw;
+        }
+h1.Desno {
+	      font-family:monotype corsiva;
+		  font-size:2vw;
+		  margin-top:0.2vw;
+		  margin-left:1vw;
+        }
+p.Desno {
+		 font-family:monotype corsiva;
+		 font-size:1.5vw;
+		 margin-top:-1.1vw;
+		 margin-left:1vw;
+}
+div.okvirDesno{
+	           border:0.1vw solid #331100;
+	           border-radius:2vw;
+	           background-color:transparent;
+	           background-image:url("Slike/cestitkaNovooo.jpg");
+	           background-repeat:no-repeat;
+	           height:25vw;
+	           width:30vw;
+			   max-width:100vw;
+	           margin:auto;
+	           margin-top:-1.3vw;
+             }
+div.okvirLijevo{
+	           border:0.1vw solid #331100;
+	           border-radius:2vw;
+	           background-color:transparent;
+	           background-image:url("Slike/foto4.jpg");
+	           background-repeat:no-repeat;
+	           height:25vw;
+	           width:30vw;
+	           margin:auto;
+	           margin-top:-1.3vw;  
+              }
+input.UnesiText {
+	           font-family:monotype corsiva;
+			   font-size:2vw;	
+               width:16vw;
+			   height:2.2vw;
+			   background-color:#ffd9b3;
+			   border:0.1vw solid black;
+			   margin-left:9vw;
+}		
+input.btnPotvrdi{
+	             font-family:monotype corsiva; 
+                 font-size:2vw;	
+				 height:2.5vw;
+                 width:10vw;
+                 background-color:#ffd9b3;
+                 border:0.1vw solid black;				 
+}
+#Tabela {
+         font-family:monotype corsiva;
+         border-collapse: collapse;
+         width:97.5vw;
+		 border-radius:5vw;
+      }
+#Tabela td, #Tabela th {
+                       border:0.4vw solid black;
+                       text-align:center;
+					   padding:0.5vw;
+					   font-size:2vw;
+                    }
+
+#Tabela tr:nth-child(even)
+                                                 {
+						  background-color:#cd853f;
+						 }
+
+#Tabela tr:hover {
+	              background-color:#ddd;
+			    }
+
+#Tabela th {
+             padding-top:1vw;
+             padding-bottom:1vw;
+             background-color:#8b4513;
+             color:black;
+			 font-size:2vw;
+			 width:20vw;
+			 
+          }	
+#KrajKnjige p{
+	           font-family:monotype corsiva;
+		       text-align:center;
+		       font-size:1.8vw;
+}
+#Link p{
+	    font-family:monotype corsiva;
+		font-size:2.5vw;
+	    margin-left:5.5vw;
+      }
+#Link ul li a {
+            text-decoration:none;
+			color:black;
+          } 
+			  
+ #Link1 li {
+	list-style:none;
+	font-size:2.5vw;
+	margin-left:5vw;
+	font-family:monotype corsiva;
+}
+#Link1 li:hover 
+                              {	               
+				list-style:url("Slike/facebook.png");		  
+               }
+#Link2 li {
+	list-style:none;
+	font-size:2.5vw;
+	margin-left:5vw;
+	font-family:monotype corsiva;
+}
+#Link2 li:hover 
+                              {	               
+			    list-style-image:url("Slike/twitter.png");	  
+               }
+#Link3 li {
+	list-style:none;
+	font-size:2.5vw;
+	margin-left:5vw;
+	font-family:monotype corsiva;
+}
+
+#Link3 li:hover 
+                              {	               
+			    list-style-image:url("Slike/instagram.png");	  
+               } 
+
+#OkvirKontakt
+           {
+        margin:auto;
+        width:25vw;
+        height:35vw;
+        border:1vw double #330000;
+        padding:1vw;
+        background-color:#996633;
+		border-radius:2vw;
+
+     }
+#txt label {
+          text-align: left;
+          font-family:monotype corsiva;
+          font-size: 2.5vw;
+		  margin-left:2vw;
+        } 
+#txt input  {
+            width: 22vw;
+            height:2.9vw;
+            margin-top:-7vw;
+			margin-left:2vw;
+			background-color:#ffdd99;
+			border:0.2vw solid black;
+			border-radius:1vw;		  
+         }
+ #txt textarea  {
+             width:22vw;
+             margin-top:-1vw;
+			 margin-left:2vw;
+			 background-color:#ffdd99;
+			 border:0.2vw solid black;
+			 border-radius:1vw;
+          }
+#btn input {
+	      margin-top:-2.5vw;
+		  margin-left:17vw;
+		  height:2.2vw;
+		  width:7vw;
+		  background-color:#ffdd99;
+		  border:0.2vw solid black;
+		  border-radius:1vw;
+}
+#oNama {
+     	background-color:transparent;
+	    height:27vw;
+	    width:43vw;
+	    margin-left:5vw;
+	    margin-top:-3vw;
+}
+#oNama p {
+		 font-family:monotype corsiva;
+		 font-size:1.8vw;
+		 text-align:justify;
+}
+#oNamaOkvir {
+	         border:0.1vw solid #331100;
+	         border-radius:2vw;
+	         background-image:url("Slike/mi.jpg");
+	         background-repeat:no-repeat;
+	         height:30vw;
+	         width:45vw;
+	         margin-left:50vw;
+	         margin-top:-27.5vw;
+           }
+#oNamaKraj p {
+	           text-align:center;
+			   font-family:monotype corsiva;
+			   font-size:2vw;
+}
+
+input.UnesiPoslovnicu {
+	                 font-family:monotype corsiva;
+			         font-size:2vw;	
+                     width:20vw;
+			         background-color:#ffd9b3;
+			         border:0.1vw solid black;
+					 margin-left:5vw;
+					 margin-top:-8vw;
+}		
+input.btnPotvrdiPoslovnicu{
+	                       font-family:monotype corsiva; 
+                           font-size:2vw;	
+                           width:10vw;
+                           background-color:#ffd9b3;
+                           border:0.1vw solid black;				 
+}
+
+@media screen and (max-width: 500px)
+{
+div.NovostLijevo {
+				 max-width:100vw;
+				 max-height:100vw;
+	             margin:auto;
+				 margin-top:1vw;
+               }
+		
+div.NovostDesno{
+	           max-width:100vw;
+			   max-height:100vw;
+	           margin:auto;
+			   margin-top:1vw;
+            }
+input.UnesiText {
+	           
+			   margin-left:35vw;
+}
+#oNama {
+     	max-height:100vw;
+		max-width:100vw;
+	    margin:auto;
+}
+
+#oNamaOkvir {
+	         
+			 max-height:100vw;
+			 max-width:100vw;
+	         margin:auto;
+			 margin-top:1vw;
+           }
+
+input.UnesiPoslovnicu {
+	                 
+					 margin-left:35vw;
+					 margin-top:1vw;
+                    }
+}
