@@ -1,22 +1,28 @@
-
+*{
+	box-sizing:border-box;
+}
 body {
         background-image:url("Slike/background.jpg");
         background-repeat:no-repeat;
         background-attachment:fixed;
 		overflow-x:hidden;
 		display:block;
+		width: 100%;
+	    margin: 0 auto;
      }
 #Naslov h1   {
-            text-align:center;
             font-size:7vw;
             font-family:monotype corsiva;
-            margin-top:-1.3vw; 
+			float:left;
+			margin-left:39vw;
+			margin-top:1vw;
            }
 
 #meni{
-       margin-top:-6vw;
+      
        padding-bottom:0.3vw;
 	   padding-top:0.3vw;
+	   float:left;
 		
      }
 #meni ul li {
@@ -28,48 +34,75 @@ body {
 				margin:2.5vw;
 				margin-left:6vw;
 				margin-top:-4vw;
+				float:left;
          }
 #meni ul a {
                 text-decoration:none;
                 color:#27190c;
                 
          }
-div.NovostLijevo {
+.red{
+	padding: 10px;
+	width:100%;
+	float:left;
+	min-height: 1px;
+	background-color:transparent;
+}
+
+.Kolona{
+	background: red;
+	margin-left: 2%;
+	margin-right: 2%;
+	display: inline-block;
+	float: left;
+	min-height: 20px;
+	background-color:transparent;
+}
+.jedan {
+	       width:100%;
+       }
+.dva {
+	   width:48%;
+     }
+	 
+.Kolona:first-child{
+	margin-left: 0px;
+}
+
+.Kolona:last-child{
+	margin-right: 0px;
+}
+.Kolona.dva.lijevo {
 	             background-color:#CC9966;
 	             border:1vw double #331100;
-	             height:31vw;
-	             width:35vw;
-	             margin-left:14vw;
+	             height:35vw;
+				 float:left;
+	             margin-left:1.5vw;
 	             margin-top:1vw;
                }
 		
-div.NovostDesno{
+.Kolona.dva.desno{
 	           background-color:#CC9966;
 	           border:1vw double #331100;
-	           height:31vw;
-	           width:35vw;
-	           margin-left:51.8vw;
-	           margin-top:-33vw;
+	           height:35vw;
+			   float:left;
+	           margin-left:49.5vw;
+	           margin-top:-35vw;
             }
-.NovostLijevo:first-child {
-	                       margin-left:0vw;
-                          }
-						  
-.NovostLijevo:last-child {
-	                       margin-right:0vw;
-                         }
-			
+
 h1.Lijevo {
 	      font-family:monotype corsiva;
 		  font-size:2vw;
-		  margin-top:0.2vw;
+		  float:left;
+		  margin-top:0.3vw;
 		  margin-left:1vw;
         }
 p.Lijevo {
 		 font-family:monotype corsiva;
 		 font-size:1.5vw;
-		 margin-top:-1.1vw;
-		 margin-left:1vw;
+		 float:left;
+		 margin-top:3vw;
+		 margin-left:-15vw;
         }
 div.okvir{
 	      border:0.1vw solid #331100;
@@ -77,22 +110,25 @@ div.okvir{
 	      background-color:transparent;
 	      background-image:url("Slike/pribor5.jpg");
 	      background-repeat:no-repeat;
+		  float:left;
 	      height:25vw;
-	      width:30vw;
-	      margin:auto;
+	      width:32vw;
+	      margin-left:6.5vw;
 	      margin-top:-1.3vw;
         }
 h1.Desno {
 	      font-family:monotype corsiva;
 		  font-size:2vw;
+		  float:left;
 		  margin-top:0.2vw;
 		  margin-left:1vw;
         }
 p.Desno {
 		 font-family:monotype corsiva;
 		 font-size:1.5vw;
-		 margin-top:-1.1vw;
-		 margin-left:1vw;
+		 float:left;
+		 margin-top:3vw;
+		 margin-left:-15vw;
 }
 div.okvirDesno{
 	           border:0.1vw solid #331100;
@@ -101,9 +137,10 @@ div.okvirDesno{
 	           background-image:url("Slike/cestitkaNovooo.jpg");
 	           background-repeat:no-repeat;
 	           height:25vw;
-	           width:30vw;
+	           width:32vw;
 			   max-width:100vw;
-	           margin:auto;
+	           float:left;
+			   margin-left:6.5vw;
 	           margin-top:-1.3vw;
              }
 div.okvirLijevo{
@@ -112,172 +149,126 @@ div.okvirLijevo{
 	           background-color:transparent;
 	           background-image:url("Slike/foto4.jpg");
 	           background-repeat:no-repeat;
+			   float:left;
 	           height:25vw;
-	           width:30vw;
-	           margin:auto;
+	           width:32vw;
+			   max-width:100vw;
+	           float:left;
+			   margin-left:6.5vw;
 	           margin-top:-1.3vw;  
               }
 input.UnesiText {
 	           font-family:monotype corsiva;
-			   font-size:2vw;	
+			   font-size:2vw;
+               float:left;			   
                width:16vw;
-			   height:2.2vw;
+			   height:2.5vw;
 			   background-color:#ffd9b3;
 			   border:0.1vw solid black;
 			   margin-left:9vw;
 }		
 input.btnPotvrdi{
 	             font-family:monotype corsiva; 
-                 font-size:2vw;	
+                 font-size:2vw;
+                 float:left;				 
 				 height:2.5vw;
                  width:10vw;
                  background-color:#ffd9b3;
                  border:0.1vw solid black;				 
 }
-#Tabela {
+.Tabela {
          font-family:monotype corsiva;
-         border-collapse: collapse;
-         width:97.5vw;
+         width:98vw;
 		 border-radius:5vw;
+		 float:left;
       }
-#Tabela td, #Tabela th {
-                       border:0.4vw solid black;
-                       text-align:center;
-					   padding:0.5vw;
-					   font-size:2vw;
-                    }
+	  
+td,th {
+         border:0.4vw solid black;
+         text-align:center;
+		 padding:0.5vw;
+		 font-size:2vw;
+     }
 
-#Tabela tr:nth-child(even)
-                                                 {
-						  background-color:#cd853f;
-						 }
+tr:nth-child(even){
+			      background-color:#cd853f;
+				 }
 
-#Tabela tr:hover {
-	              background-color:#ddd;
-			    }
+tr:hover {
+	      background-color:#ddd;
+        }		    
 
-#Tabela th {
-             padding-top:1vw;
-             padding-bottom:1vw;
-             background-color:#8b4513;
-             color:black;
-			 font-size:2vw;
-			 width:20vw;
+th{
+     padding-top:1vw;
+     padding-bottom:1vw;
+     background-color:#8b4513;
+     color:black;
+	 font-size:2vw;
+	 width:20vw;
 			 
-          }	
-#KrajKnjige p{
-	           font-family:monotype corsiva;
-		       text-align:center;
-		       font-size:1.8vw;
-}
-#Link p{
-	    font-family:monotype corsiva;
-		font-size:2.5vw;
-	    margin-left:5.5vw;
-      }
-#Link ul li a {
-            text-decoration:none;
-			color:black;
-          } 
+  }	
+p.paragraf{
+           	            font-family:monotype corsiva;
+		                font-size:3vw;
+		                float:left;
+				        margin-top:1vw;
+				        margin-left:8vw;
+               }
+ul.Uredi li {
+	      
+	      float:left;
+	      list-style:none;
+		  margin-left:5vw;
+		  font-size:2.2vw;
+		  margin-top:-3vw;
+		  
+          
+	}			   
+ul.Uredi li a {
+	             font-family:monotype corsiva;
+	             float:left;
+                 text-decoration:none;
+                 color:black;					 
+           } 
 			  
- #Link1 li {
-	list-style:none;
-	font-size:2.5vw;
-	margin-left:5vw;
-	font-family:monotype corsiva;
-}
-#Link1 li:hover 
+li.Face:hover 
                               {	               
 				list-style:url("Slike/facebook.png");		  
                }
-#Link2 li {
-	list-style:none;
-	font-size:2.5vw;
-	margin-left:5vw;
-	font-family:monotype corsiva;
-}
-#Link2 li:hover 
+li.Twitter:hover 
                               {	               
 			    list-style-image:url("Slike/twitter.png");	  
                }
-#Link3 li {
-	list-style:none;
-	font-size:2.5vw;
-	margin-left:5vw;
-	font-family:monotype corsiva;
-}
-
-#Link3 li:hover 
+li.Instagram:hover 
                               {	               
 			    list-style-image:url("Slike/instagram.png");	  
                } 
-
-#OkvirKontakt
-           {
-        margin:auto;
-        width:25vw;
-        height:35vw;
-        border:1vw double #330000;
-        padding:1vw;
-        background-color:#996633;
-		border-radius:2vw;
-
-     }
-#txt label {
-          text-align: left;
-          font-family:monotype corsiva;
-          font-size: 2.5vw;
-		  margin-left:2vw;
-        } 
-#txt input  {
-            width: 22vw;
-            height:2.9vw;
-            margin-top:-7vw;
-			margin-left:2vw;
-			background-color:#ffdd99;
-			border:0.2vw solid black;
-			border-radius:1vw;		  
-         }
- #txt textarea  {
-             width:22vw;
-             margin-top:-1vw;
-			 margin-left:2vw;
-			 background-color:#ffdd99;
-			 border:0.2vw solid black;
-			 border-radius:1vw;
-          }
-#btn input {
-	      margin-top:-2.5vw;
-		  margin-left:17vw;
-		  height:2.2vw;
-		  width:7vw;
-		  background-color:#ffdd99;
-		  border:0.2vw solid black;
-		  border-radius:1vw;
+			   
+.poravnato {
+	              max-height:45vw;
 }
-#oNama {
-     	background-color:transparent;
-	    height:27vw;
-	    width:43vw;
-	    margin-left:5vw;
-	    margin-top:-3vw;
+p.tekst {
+     	    background-color:transparent;
+	        height:30vw;
+	        margin-left:5vw;
+	        margin-top:-1vw;
+			float:left;
+			font-family:monotype corsiva;
+		    font-size:2vw;
+		    text-align:justify;
+			float:left;
 }
-#oNama p {
-		 font-family:monotype corsiva;
-		 font-size:1.8vw;
-		 text-align:justify;
-}
-#oNamaOkvir {
+.slika {
 	         border:0.1vw solid #331100;
 	         border-radius:2vw;
 	         background-image:url("Slike/mi.jpg");
 	         background-repeat:no-repeat;
 	         height:30vw;
-	         width:45vw;
-	         margin-left:50vw;
-	         margin-top:-27.5vw;
+	         margin-left:49vw;
+	         margin-top:-31vw;
+			 float:left;
            }
-#oNamaKraj p {
+p.kraj {
 	           text-align:center;
 			   font-family:monotype corsiva;
 			   font-size:2vw;
@@ -290,16 +281,51 @@ input.UnesiPoslovnicu {
 			         background-color:#ffd9b3;
 			         border:0.1vw solid black;
 					 margin-left:5vw;
-					 margin-top:-8vw;
+					 float:left;
 }		
 input.btnPotvrdiPoslovnicu{
 	                       font-family:monotype corsiva; 
                            font-size:2vw;	
                            width:10vw;
                            background-color:#ffd9b3;
-                           border:0.1vw solid black;				 
+                           border:0.1vw solid black;
+                           float:left;						   
 }
-
+.Forma{
+        border:1vw double #330000;
+        padding:1vw;
+        background-color:#996633;
+		border-radius:2vw;
+		float:left;
+		margin-left:35vw;
+      }
+label{
+	      text-align: left;
+          font-family:monotype corsiva;
+          font-size: 2.5vw;
+		  margin-left:1vw;
+		  float:left;
+		  margin-top:1.5vw;
+}
+input{
+	  width: 22vw;
+      height:2.9vw;
+      margin-top:0.9vw;
+      margin-left:1vw;
+	  background-color:#ffdd99;
+	  border:0.2vw solid black;
+	  border-radius:1vw;
+	  float:left;
+    }
+textarea{
+             width:22vw;
+             margin-top:-0.2vw;
+			 margin-left:1vw;
+			 background-color:#ffdd99;
+			 border:0.2vw solid black;
+			 border-radius:1vw;
+			 float:left;
+          }
 @media screen and (max-width: 500px)
 {
 div.NovostLijevo {
