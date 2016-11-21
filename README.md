@@ -83,3 +83,5 @@ validacija.js - Fajl koji omogućava validaciju svih polja formi na stranici
 AjaxInformacije.txt - Fajl koji sadrzi tekst koji se dodajem bez reload-a stranice
 
 stil.css - U tom fajlu se nalazi definisan stil svih stranica.
+
+Kreirane stranice su i dalje responzivne i imaju grid-view izgled. Također, omogućen je izgled za mobilne uređaje pomoću media query-a 
