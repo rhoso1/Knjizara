@@ -9,7 +9,7 @@
 	 $pdf->SetTextColor(128, 0, 0);
      $pdf->MultiCell(120,20,'Knjige koje mozete pronaci kod nas su:');
 
-     $_XML = simplexml_load_file("Novost.xml");
+     $_XML = simplexml_load_file("Knjige.xml");
       foreach($_XML->knjiga as $_knjiga)
       {
 		  $_ispis =" - ".$_knjiga->naslov.", ".$_knjiga->autor.";";

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knjige>
+  <knjiga>
+    <naslov>Zovem se Crvena</naslov>
+    <zanr>Roman</zanr>
+    <autor>Orhan Pamuk</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Lovac na zmajeve</naslov>
+    <zanr>Roman</zanr>
+    <autor>Khaled Hosseini</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Inferno</naslov>
+    <zanr>Roman</zanr>
+    <autor>Dan Brown</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Harry Potter - I dio</naslov>
+    <zanr>Roman, fantastika</zanr>
+    <autor>J. K. Rowling</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Harry Potter - II dio</naslov>
+    <zanr>Roman, fantastika</zanr>
+    <autor>J. K. Rowling</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Crveno i crno</naslov>
+    <zanr>Roman</zanr>
+    <autor>Stendhal</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Ana Karenjina</naslov>
+    <zanr>Roman</zanr>
+    <autor>Lav Tolstoj</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>proba</naslov>
+    <zanr>proba</zanr>
+    <autor>proba</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>proba</naslov>
+    <zanr>proba</zanr>
+    <autor>proba</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>probamo</naslov>
+    <zanr>probamo csv</zanr>
+    <autor>proba</autor>
+  </knjiga>
+</knjige>

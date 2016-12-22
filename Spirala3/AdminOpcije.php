@@ -25,6 +25,15 @@
 			{
 			  header("Location: BrisanjeKnjige.php");
 			}
+			
+			if(isset($_POST['BtnUnosNovosti']))
+			{
+			  header("Location: UnosNovosti.php");
+			}
+			if(isset($_POST['BtnBrisanjeNovosti']))
+			{
+			  header("Location: BrisanjeNovosti.php");
+			}
 			if(isset($_POST['BtnCSV']))
 			{
 			  header("Location: csvFile.php");
@@ -70,16 +79,22 @@
 				    <td><label>Odaberite opciju:</label></td>
 				   </tr>
 				   <tr>
-				    <td><input type="submit" value="Unos podataka" name="BtnUnos" class="input"></td>
+				    <td><input type="submit" value="Unos knjige" name="BtnUnos" class="input"></td>
 				   </tr>
 				   <tr>
-				    <td><input type="submit" value="Obriši/Uredi podatke" name="BtnBrisanje" class="input"></td>
+				    <td><input type="submit" value="Obriši/Uredi knjige" name="BtnBrisanje" class="input"></td>
+				   </tr>
+				   <tr>
+				    <td><input type="submit" value="Unos novosti" name="BtnUnosNovosti" class="input"></td>
+				   </tr>
+				   <tr>
+				    <td><input type="submit" value="Obriši/Uredi novost" name="BtnBrisanjeNovosti" class="input"></td>
+				   </tr>
+				   <tr>
+				    <td><input type="submit" value="Skini CSV" name="BtnCSV" class="input"></td>
 				   </tr>
 				   <tr>
 				    <td><input type="submit" value="Odjava" name="BtnOdjava" class="input"></td>
-				   </tr>
-				   <tr>
-				    <td><input type="submit" value="CSV datoteka" name="BtnCSV" class="input"></td>
 				   </tr>
 				 </table> 
                </form>

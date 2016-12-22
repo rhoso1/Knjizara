@@ -1,10 +1,10 @@
 <?php
-//Upisivanje iz Novost.xml u Novost.csv
+//Upisivanje iz Knjige.xml u Knjige.csv
 session_start();
        
-	   $_XML = simplexml_load_file("Novost.xml");
+	   $_XML = simplexml_load_file("Knjige.xml");
 	   
-	   $_upis = fopen("Novost.csv","w");
+	   $_upis = fopen("Knjige.csv","w");
 		
 		foreach($_XML->knjiga as $_knjiga)
 		{
@@ -14,9 +14,9 @@ session_start();
 	fclose($_upis);
 	
 	//Skidanje Novost.csv
-	$filename="Novost.csv";
+	$filename="Knjige.csv";
 	header('Content-Type: application/csv; charset=UTF-8');
     header('Content-Disposition: attachment;filename="'.$filename.'";');
-	readfile("Novost.csv");
+	readfile("Knjige.csv");
  
 ?>

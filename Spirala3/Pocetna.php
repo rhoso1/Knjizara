@@ -8,20 +8,10 @@
 	<script type="text/javascript" src="DropDown.js"></script>
    </HEAD>
 <BODY>
-
-<?php 
-     if(isset($_POST["pdfBtn"]))
-	 {
-		 header("Location: MyPDF.php");
-	 }
-?>
      
        <div class="red">
 	     <div class="Kolona jedan">
 		    <h1 class="Naslov">eBook</h1>
-			  <form class="pdf" action="Pocetna.php" method="post">
-			   <input type="submit" class="pdfBtn" name="pdfBtn" value="">
-			  </form>
 		 </div>
 	   </div>
      
@@ -49,31 +39,25 @@
 	     </div>
 	   </div>
 	   
-	   <div class="red">
-			    <div class="Kolona jedan">
-				    <p class="kraj">Knjige u našoj ponudi</h2>
-				</div>
-            </div>
-	   
 		   <?php 
 		    
             $_XML = simplexml_load_file("Novost.xml");
               
-              foreach($_XML->knjiga as $_knjiga)
+              foreach($_XML->novost as $_novost)
               {
 			?>
 			<div class="red">
 	          <div class ="Kolona jedan">
-		        <form class="Prikaz" action="PrikazKnjiga.php" method="post">
+		        <form class="Prikaz" action="Pocetna.php" method="post">
 			      <table>
 				    <tr>
-				    <td><label>Naziv knjige:</label><input type="text" class="urediInput" name="naslovKnjige" readonly="readonly" value="<?php echo $_knjiga->naslov ?>"></td>
+				    <td><input type="text" class="urediInput" name="naslovNovosti" readonly="readonly" value="<?php echo $_novost->naslov ?>"></td>
 				   </tr>
 				   <tr>
-				    <td><label>Žanr: </label><input type="text" class="urediInput" name="zanr" readonly="readonly" value="<?php echo $_knjiga->zanr ?>" ></td>
+				    <td><textarea rows="" cols="35" class="urediInput" name="sadrzaj" readonly="readonly"><?php echo $_novost->sadrzaj ?></textarea></td>
 				   </tr>
 				   <tr>
-				    <td><label>Autor: </label><input type="text" class="urediInput" name="author" readonly="readonly" value="<?php echo $_knjiga->autor ?>"></td>
+				    <td><input type="text" class="urediInput" name="autor" readonly="readonly" value="<?php echo $_novost->autor ?>"></td>
 				   </tr>
 				 </table> 
                </form>
@@ -82,47 +66,6 @@
 				<?php
                       }
 	        	?>  
-	   
-	<!--<div class="red">
-	   <div class="Kolona dva slikaP">
-	    <div class="lijevo">
-	     <h1 class="Lijevo">Novo u našoj ponudi</h1>
-	     <p class="Lijevo">Školski pribor po izuzetno niskim cijenama...
-	     <br>
-	     </p>
-	     <div class="okvir"></div>
-		 </div>
-		 </div>
-		 
-		 <div class="Kolona dva slikaP">
-		   <div class="desno">
-		   <h1 class="Desno">Novo u našoj ponudi - čestitke</h1>
-	       <div class="okvirDesno"></div>
-		   </div>
-		  </div>
-	   </div>
-	   
-	
-	
-	<div class="red">
-	   <div class="Kolona dva slikaP">
-	    <div class="lijevo">
-	       <h1 class="Lijevo">Novo u našoj ponudi</h1>
-	       <p class="Lijevo">Izrada albuma sa fotografijama po Vašoj želji...
-	       <br>
-	       </p>
-	       <div class="okvirLijevo"></div>
-		 </div>
-       	</div>	
-		<div class="Kolona dva slikaP">
-		  <div class="desno">
-		    <h1 class="Desno">I još puno toga...</h1>
-	        <p class="Desno">Posjetite nas svakim radim danom u periodu od 09:00-16:00
-			 </p>
-		  </div>
-	  </div>
-	</div>
-	-->
 	<div class="red">
 			    <div class="Kolona jedan">
 				    <p class="kraj">Posjetite nas u ulici Zmaja od Bosne bb, Sarajevo.</p>

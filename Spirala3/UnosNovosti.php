@@ -21,35 +21,35 @@
     }
 	$_msg = "";
 	  
-	  if( isset($_POST["BtnOKnovost"]) && (empty($_POST["naslovKnjige"]) || empty($_POST["zanr"]) || empty($_POST["author"])))
+	  if( isset($_POST["BtnNovost"]) && (empty($_POST["naslovNovosti"]) || empty($_POST["sadrzajNovosti"]) || empty($_POST["autor"])))
 		  {
 			  $_msg="Popunite sva polja";
 		  }
-	  if( isset($_POST["BtnOKnovost"]) && (strlen($_POST["naslovKnjige"]) < 2 || strlen($_POST["zanr"]) < 2 || strlen($_POST["author"]) < 2))
+	  if( isset($_POST["BtnNovost"]) && (strlen($_POST["naslovNovosti"]) < 2 || strlen($_POST["sadrzajNovosti"]) < 2 || strlen($_POST["autor"]) < 2))
 	  {
 		  $_msg="Dužina unosa mora biti veća od 2 znaka";
 	  }
 	  
-	  if(isset($_POST["BtnOKnovost"]))
+	  if(isset($_POST["BtnNovost"]))
 	  {
-		       Validiraj($_POST["naslovKnjige"]);
-	           Validiraj($_POST["zanr"]);
-	           Validiraj($_POST["author"]);
+		       Validiraj($_POST["naslovNovosti"]);
+	           Validiraj($_POST["sadrzajNovosti"]);
+	           Validiraj($_POST["autor"]);
 			   
-        $_XML = new SimpleXMLElement("Knjige.xml", null, true);
+        $_XML = new SimpleXMLElement("Novost.xml", null, true);
 		
-        $_data = $_XML->addChild('knjiga');
-        $_data->addChild('naslov', $_POST["naslovKnjige"]);
-        $_data->addChild('zanr', $_POST["zanr"]);
-		$_data->addChild('autor', $_POST["author"]);
-        $_XML->asXML('Knjige.xml');
+        $_data = $_XML->addChild('novost');
+        $_data->addChild('naslov', $_POST["naslovNovosti"]);
+        $_data->addChild('sadrzaj', $_POST["sadrzajNovosti"]);
+		$_data->addChild('autor', $_POST["autor"]);
+        $_XML->asXML('Novost.xml');
 		
 		//Formatiranje novosti u xml file-u
 		$dom = new DOMDocument('1.0');
         $dom->preserveWhiteSpace = false;
         $dom->formatOutput = true;
         $dom->loadXML($_XML->asXML());
-        $dom->save('Knjige.xml');
+        $dom->save('Novost.xml');
 	  }
 	
 	  
@@ -91,54 +91,48 @@
 	   
 	   <div class="red">
 	     <div class ="Kolona jedan">
-		   <form class="Podaci" action="UnosPodataka.php" method="post">
+		   <form class="Novosti" action="UnosNovosti.php" method="post">
 			     <table>
 				   <tr>
-				    <td><label>Unesite podatke:</label></td>
+				    <td><label id="nn">Unesite novost</label></td>
 				   </tr>
 				   <tr>
-				    <td><label>Naziv knjige: </label></td>
+				    <td><label class="nn">Naslov novosti: </label></td>
 				   </tr>
 				   <tr>
-				    <td><input type="text" name="naslovKnjige" id="naslovKnjige" placeholder="Naslov" onkeyup="ValidirajUnos()"></td>
+				    <td><input type="text" name="naslovNovosti" id="naslovNovosti" placeholder="Naslov"></td>
 				   </tr>
 				   <tr>
-				    <td><label id="naslovLabel"></label></td>
+				    <td><label id="novostLabel"></label></td>
 				   </tr>
 				   <tr>
-				    <td><label>Žanr: </label></td>
+				    <td><label class="nn">Sadržaj novosti: </label></td>
 				   </tr>
 				   <tr>
-				    <td><input type="text" name="zanr" id="zanr" placeholder="Naslov" onkeyup="ValidirajUnos()"></td>
+				    <td><textarea rows="5" cols="35" name ="sadrzajNovosti" id="txtNovost" class="nn"></textarea></td>
 				   </tr>
 				   <tr>
-				    <td><label id="zanrLabel"></td>
+				    <td><label id="sadrzajLabel"></td>
 				   </tr>
 				   <tr>
-				    <td><label>Autor: </label></td>
+				    <td><label class="nn">Autor: </label></td>
 				   </tr>
 				   <tr>
-				    <td><input type="text" name="author" id="author" placeholder="Autor" onkeyup="ValidirajUnos()"></td>
+				    <td><input type="text" name="autor" id="autorNovosti" placeholder="Autor"></td>
 				   </tr>
 				   <tr>
-				    <td><label id="autorLabel"></label></td>
+				    <td><label id="autorNovostiLabel"></label></td>
 				   </tr>
 				   <tr>
-				    <td><input type="submit" value="OK" name="BtnOKnovost" id="OKnovost" onclick="ValidirajPodatke()"></td>
+				    <td><input type="submit" value="OK" name="BtnNovost" id="dodajNovost"></td>
 				   </tr>
-				    <td><label id="dugmeLabel"><?php echo $_msg ?></label></td>
-				 </table> 
+				    <td><label id="dodajNovostLabel"><?php echo $_msg ?></label></td> 
+					 <tr>
+				    <td><input type="submit" value="Nazad" name="BtnNazadOpcije" class="nazadBtnNovost"></td>
+				   </tr>
                </form>
 		 </div>
-	   </div>
-	   
-	   <div class="red">
-	         <div class ="Kolona jedan">
-		       <form action="UnosPodataka.php" method="post">
-		        <input type="submit" value="Nazad" name="BtnNazadOpcije" class="nazadBtn">
-		       </form>
-		    </div>
-	     </div>
+       </div>
   
 </BODY>
 </HTML>

@@ -9,6 +9,12 @@
 	<script type="text/javascript" src="DropDown.js"></script>
    </HEAD>
 <BODY>
+<?php 
+     if(isset($_POST["pdfBtn"]))
+	 {
+		 header("Location: MyPDF.php");
+	 }
+?>
      <div class="red">
 	     <div class="Kolona jedan">
 		    <h1 class="Naslov">eBook</h1>
@@ -38,75 +44,66 @@
            </div>
 	     </div>
 	   </div>
-		 <div class="red">
-		    <div class="Kolona jedan">
-			   <form action="Knjige.php" method="post">
-			     <table class="Granica">
-				 <tr id="Input"></tr>
-				   <tr>
-			        <td><label class="Naziv">Unesite naziv knjige:</label></td>
-                    <td><input class="UnesiText" type="text" name="Knjiga" id="InputKnjiga" onkeyup="ValidirajKnjigu()"></td>
-                    <td><input class="btnPotvrdi" type="submit" value="Pretraži" id="BtnKnjiga" onclick="Validiraj()"></td>
-				   </tr>
-				 </table> 
-               </form>
-			</div>
-		 </div>
 		 
 		<div class="red">
 		   <div class="Kolona jedan">
 		     <table class="Tabela">
 			   <tr>   
-                 <th>Informatika</th>
-                 <th>Umjetnost</th>
-                 <th>Književnost</th>
-                 <th>Sport</th>
-                 <th>Kućna Medicina</th>
-              </tr>
-              <tr>   
-                 <td>C# Programming</td>
-                 <td>Umjetnost5</td>
-                 <td>Derviš i smrt</td>
-                 <td>Sport5</td>
-                 <td>Kućna Medicina1</td>
-              </tr>
-              <tr>   
-                 <td>Java Programming</td>
-                 <td>Umjetnost4</td>
-                 <td>Jedan život</td>
-                 <td>Sport4</td>
-                 <td>Kućna Medicina2</td>
-             </tr>
-             <tr>   
-                 <td>Software Eng</td>
-                 <td>Umjetnost3</td>
-                 <td>Crna duša</td>
-                 <td>Sport3</td>
-                 <td>Kućna Medicina3</td>
-            </tr>
-            <tr>   
-                 <td>CAD</td>
-                 <td>Umjetnost2</td>
-                 <td>Amanet</td>
-                 <td>Sport2</td>
-                 <td>Kućna Medicina4</td>
-            </tr>
-            <tr>   
-                 <td>PHP</td>
-                 <td>Umjetnost1</td>
-                 <td>Tvrđava</td>
-                 <td>Sport1</td>
-                 <td>Kućna Medicina5</td>
-            </tr>
-           </table>
+                 <th>Naslov</th>
+                 <th>Žanr</th>
+                 <th>Autor</th>
+               </tr>
+			   <?php 
 		    
+            $_XML = simplexml_load_file("Knjige.xml");
+              
+              foreach($_XML->knjiga as $_knjiga)
+              {
+			?>
+			   <tr>
+			   <td><?php echo $_knjiga->naslov ?></td>
+			   <td><?php echo $_knjiga->zanr ?></td>
+			   <td><?php echo $_knjiga->autor ?></td>
+			   </tr>
+			   <?php
+                      }
+	        	?>  
+              </table>
 		  </div>
 		</div>
-          <div class="red">
+		
+		<div class="red">
+			    <div class="Kolona jedan">
+				    <p class="pdfParagraf">Spisak knjiga u pdf formatu možete preuzeti ovdje:</p>
+					<form class="pdf" action="Knjige.php" method="post">
+			          <input type="submit" class="pdfBtn" name="pdfBtn" value="">
+			        </form>
+				</div>
+            </div>
+		
+		<div class="red">
+		    <div class="Kolona jedan">
+			   <form action="Knjige.php" method="post">
+			     <table class="Granica">
+				   <tr>
+				   <td><label class="Naziv">Unesite naziv knjige:</label><input class="UnesiText" type="text" name="Knjiga" id="InputKnjiga" onkeyup="ValidirajKnjigu()"></td>
+				   </tr>
+				   <tr>
+				   <td><label>Unestite ime autora:</label><input class="UnesiText" type="text" name="autor" id="autorKnjiga" onkeyup="ValidirajKnjigu()"></td>
+				   </tr>
+				   <tr>
+				   <td><input class="btnPotvrdi" type="submit" value="Pretraži" id="BtnKnjiga" onclick="Validiraj()"></td>
+				   </tr>
+				 </table> 
+               </form>
+			</div>
+		 </div>	
+		
+	        <div class="red">
 			    <div class="Kolona jedan">
 				    <p class="kraj">Posjetite nas u ulici Zmaja od Bosne bb, Sarajevo.</p>
 				</div>
-            </div>		 
+            </div>		
 		 
 		 
 </BODY>

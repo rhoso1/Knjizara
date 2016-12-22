@@ -17,26 +17,20 @@
 			    }
 				
 				//Briše knjigu koja odgovara button-u
-			if(isset($_POST['naslovKnjige']))
+			if(isset($_POST['naslovNovosti']))
 			{				
-				 $_XML = simplexml_load_file("Knjige.xml");
+				 $_XML = simplexml_load_file("Novost.xml");
 				
-				  foreach($_XML->knjiga as $_knjiga)
+				  foreach($_XML->novost as $_novost)
                 {
-                 if((isset($_POST['Obrisi'])) && $_knjiga->naslov == $_POST['naslovKnjige'])
+                 if((isset($_POST['Obrisi'])) && $_novost->naslov == $_POST['naslovNovosti'])
 				 {
-                      $tmp = dom_import_simplexml($_knjiga);
+                      $tmp = dom_import_simplexml($_novost);
                       $tmp->parentNode->removeChild($tmp);
                  }
                }
-            $_XML->asXML('Knjige.xml');
+            $_XML->asXML('Novost.xml');
 			}	
-			
-			//Modifikacija elemenata
-			if((isset($_POST['Uredi'])) && $_knjiga->naslov == $_POST['naslovKnjige'])
-			{
-                   
-			}
                   
 		?>
        <div class="red">
@@ -71,23 +65,23 @@
 	   
 	   <?php 
 		    
-            $_XML = simplexml_load_file("Knjige.xml");
+            $_XML = simplexml_load_file("Novost.xml");
               
-              foreach($_XML->knjiga as $_knjiga)
+              foreach($_XML->novost as $_novost)
               {
 			?>
 	       <div class="red">
 	          <div class ="Kolona jedan">
-		        <form class="Brisanje" action="BrisanjeKnjige.php" method="post">
+		        <form class="Brisanje" action="BrisanjeNovosti.php" method="post">
 			      <table>
 				    <tr>
-				    <td><label>Naziv knjige:</label><input type="text" class="urediInput" name="naslovKnjige" readonly="readonly" value="<?php echo $_knjiga->naslov ?>"></td>
+				    <td><label>Naslov novosti:</label><input type="text" class="urediInput" name="naslovNovosti" readonly="readonly" value="<?php echo $_novost->naslov ?>"></td>
 				   </tr>
 				   <tr>
-				    <td><label>Žanr: </label><input type="text" class="urediInput" name="zanr" readonly="readonly" value="<?php echo $_knjiga->zanr ?>" ></td>
+				    <td><label>Sadržaj novosti: </label><input type="text" class="urediInput" name="sadrzajNovosti" readonly="readonly" value="<?php echo $_novost->sadrzaj ?>" ></td>
 				   </tr>
 				   <tr>
-				    <td><label>Autor: </label><input type="text" class="urediInput" name="author" readonly="readonly" value="<?php echo $_knjiga->autor ?>"></td>
+				    <td><label>Autor: </label><input type="text" class="urediInput" name="autorNovosti" readonly="readonly" value="<?php echo $_novost->autor ?>"></td>
 				   </tr>
 				   <tr>
 				    <td><input type="submit" value="Uredi" name="Uredi" class="BtnUredi"><input type="submit" value="Obriši" name="Obrisi" class="BtnObrisi"></td>
@@ -102,7 +96,7 @@
 		  
 		   <div class="red">
 	         <div class ="Kolona jedan">
-		       <form action="BrisanjeKnjige.php" method="post">
+		       <form action="BrisanjeNovosti.php" method="post">
 		        <input type="submit" value="Nazad" name="BtnNazadOpcije" class="nazadBtn">
 		       </form>
 		    </div>

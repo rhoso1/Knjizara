@@ -93,118 +93,28 @@ h1.Naslov   {
 	           margin-top:1vw;
             }
 
-h1.Lijevo {
-	      font-family:monotype corsiva;
-		  font-size:2vw;
-		  float:left;
-		  margin-top:0.3vw;
-		  margin-left:1vw;
-        }
-p.Lijevo {
-		 font-family:monotype corsiva;
-		 font-size:1.5vw;
-		 float:left;
-		 margin-top:3vw;
-		 margin-left:-15vw;
-        }
-div.okvir{
-	      border:0.1vw solid #331100;
-	      border-radius:2vw;
-	      background-color:transparent;
-	      background-image:url("Slike/pribor5.jpg");
-	      background-repeat:no-repeat;
-		  float:left;
-	      height:25vw;
-	      width:32vw;
-	      margin-left:6.5vw;
-	      margin-top:-1.3vw;
-		  animation-name: promjenaPribor;
-          animation-duration:20s;
-        }
-		
-@keyframes promjenaPribor {
-    0%   {background-image:url("Slike/pribor1.jpg");}
-    25%  {background-image:url("Slike/pribor2.jpg");}
-    50%  {background-image:url("Slike/pribor3.jpg");}
-    100% {background-image:url("Slike/pribor4.jpg");}
-}
-h1.Desno {
-	      font-family:monotype corsiva;
-		  font-size:2vw;
-		  float:left;
-		  margin-top:1vw;
-		  margin-left:1vw;
-        }
-p.Desno {
-		 font-family:monotype corsiva;
-		 font-size:1.5vw;
-		 float:left;
-		 margin-top:-25.5vw;
-		 margin-left:-15vw;
-		 padding:25vw;
-}
-div.okvirDesno{
-	           border:0.1vw solid #331100;
-	           border-radius:2vw;
-	           background-color:transparent;
-	           background-image:url("Slike/cestitkaNovooo.jpg");
-	           background-repeat:no-repeat;
-	           height:25vw;
-	           width:32vw;
-			   max-width:100vw;
-	           float:left;
-			   margin-left:6.5vw;
-	           margin-top:0.2vw;
-			   animation-name: promjenaCestitka;
-               animation-duration: 20s;
-             }
-@keyframes promjenaCestitka {
-    0%   {background-image:url("Slike/cestitka1.jpg");}
-    25%  {background-image:url("Slike/cestitka2.jpg");}
-    50%  {background-image:url("Slike/cestitka3.jpg");}
-    100% {background-image:url("Slike/cestitka4.jpg");}
-}
-div.okvirLijevo{
-	           border:0.1vw solid #331100;
-	           border-radius:2vw;
-	           background-color:transparent;
-	           background-image:url("Slike/foto4.jpg");
-	           background-repeat:no-repeat;
-			   float:left;
-	           height:25vw;
-	           width:32vw;
-			   max-width:100vw;
-	           float:left;
-			   margin-left:6.5vw;
-	           margin-top:-1.3vw;
-               animation-name: promjenaAlbum;
-               animation-duration: 20s;			   
-              }
-@keyframes promjenaAlbum {
-    0%   {background-image:url("Slike/album1.jpg");}
-    25%  {background-image:url("Slike/album2.jpg");}
-    50%  {background-image:url("Slike/album3.jpg");}
-    100% {background-image:url("Slike/album4.jpg");}
-}
 .Granica {
 	      margin:auto;
 		  border: 0.5vw double black;  
 		  padding:1vw;
-		  background-image:url("Slike/pozadinaForma.jpg");
-         }
+		  background-image:transparent;
+}
 input.UnesiText {
 	           font-family:monotype corsiva;
 			   font-size:2vw;            			   
-               width:16vw;
+               width:20vw;
 			   height:2.5vw;
-			   background-color:#ffdd99;;
+			   background-color:#ffdd99;
+			   margin-top:2vw;
+			   float:right;
 }		
 input.btnPotvrdi{
 	             font-family:monotype corsiva; 
                  font-size:2vw;             				 
-				 height:2.5vw;
+				 height:3vw;
                  width:10vw;
-                 background-color:#ffdd99;;
+                 background-color:#ffdd99;
+				 float:right;
                  				 
 }
 .Tabela {
@@ -315,7 +225,7 @@ input.btnPotvrdiPoslovnicu{
 form.Forma{
         border:1vw double #330000;
         padding:1vw;
-        background-image:url("Slike/pozadinaForma.jpg");
+        background-image:url("Slike/pozadinaaa.jpg");
 		border-radius:2vw;
 		float:left;
 		margin-left:35vw;
@@ -462,7 +372,7 @@ form.AdminForma{
 		         float:left;
 		         margin-left:35vw;
 	             width:30vw;
-		         height:27vw;
+		         height:35vw;
       }
 input.input{
      font-family:monotype corsiva;
@@ -475,13 +385,13 @@ input.input:hover{
 form.Podaci{
 	             border:1vw double #330000;
                  padding:1vw;
-                 background-image:url("Slike/pozadinaForma.jpg");
+                 background-image:url("Slike/pozadinaaa.jpg");
 				 background-repeat:no-repeat;
 		         border-radius:2vw;
 		         float:left;
 		         margin-left:35vw;
 	             width:30vw;
-		         height:57vw;
+		         height:47vw;
 }
 form.Prikaz{
 	             border:0.5vw double #330000;
@@ -493,14 +403,24 @@ form.Prikaz{
 		         float:left;
 		         margin-left:23vw;
 	             width:50vw;
-		         height:20vw;
+		         height:25vw;
+				 
 }
 input.urediInput{
 	               border:0vw solid black;
 				   background-color:transparent;
 				   margin-top:1.5vw;
 				   font-family:monotype corsiva;
+                   font-size:3vw;
+}
+textarea.urediInput{
+	               border:0vw solid black;
+				   background-color:transparent;
+				   margin-top:1.5vw;
+				   font-family:monotype corsiva;
                    font-size:2.5vw;
+				   width:45vw;
+				   height:10vw;
 }
 input.BtnUredi{
             	background-color:#ffdd99;
@@ -555,13 +475,41 @@ h2.pocetnaStrana{
 input.pdfBtn{
 	           background-image:url("Slike/pdf.png");
 			   background-color:transparent;
-			   width:6.1vw;
-			   height:6.2vw;
+			   width:3.6vw;
+			   height:3.7vw;
 			   border:0.1 vw black solid;
-			   float:right;
-			   margin-top:2.5vw;
+			   margin-top:-6vw;
+			   margin-left:51vw;
 			   border:0vw solid black;
 }
+form.Novosti{
+	             border:1vw double #330000;
+                 padding:1vw;
+                 background-image:url("Slike/pozadinaaa.jpg");
+				 background-repeat:no-repeat;
+		         border-radius:2vw;
+		         float:left;
+		         margin-left:35vw;
+	             width:30vw;
+		         height:50vw;
+}
+input.nazadBtnNovost{
+            	background-color:#ffdd99;
+				width:7vw;
+				height:3vw;
+				font-family:monotype corsiva;
+                font-size:2vw;
+				text-align:center;
+				margin-top:6vw;
+				float:right;
+	
+}
+p.pdfParagraf{
+	            font-family:monotype corsiva;
+                font-size:2.5vw;
+				margin-left:5vw;
+}
+
 @media screen and (max-width: 430px)
 {
     .red, .Kolona{
