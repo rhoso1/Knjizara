@@ -93,7 +93,7 @@
 			   <form action="Knjige.php" method="post">
 			     <table class="Granica">
 				   <tr>
-				   <td><label class="Naziv">Unos za pretragu:</label><input class="UnesiText" type="text" name="Knjiga" id="InputKnjiga" onkeyup="Pretraga(this.value)"></td>
+				   <td><label class="Naziv">Unos za pretragu:</label><input class="UnesiText" type="text" name="Knjiga" id="InputKnjiga" onkeyup="Pretraga(this.value)" required></td>
 				   </tr>
 				   <tr>
 				   <td><p class="prijedlog">Prijedlog naslov:<span class="span" id="suggLabel"></span></p></td>

@@ -100,7 +100,7 @@
 				    <td><label>Naziv knjige: </label></td>
 				   </tr>
 				   <tr>
-				    <td><input type="text" name="naslovKnjige" id="naslovKnjige" placeholder="Naslov" onkeyup="ValidirajUnos()"></td>
+				    <td><input type="text" name="naslovKnjige" id="naslovKnjige" placeholder="Naslov" onkeyup="ValidirajUnos()" required></td>
 				   </tr>
 				   <tr>
 				    <td><label id="naslovLabel"></label></td>
@@ -109,7 +109,7 @@
 				    <td><label>Žanr: </label></td>
 				   </tr>
 				   <tr>
-				    <td><input type="text" name="zanr" id="zanr" placeholder="Naslov" onkeyup="ValidirajUnos()"></td>
+				    <td><input type="text" name="zanr" id="zanr" placeholder="Naslov" onkeyup="ValidirajUnos()" required></td>
 				   </tr>
 				   <tr>
 				    <td><label id="zanrLabel"></td>
@@ -118,7 +118,7 @@
 				    <td><label>Autor: </label></td>
 				   </tr>
 				   <tr>
-				    <td><input type="text" name="author" id="author" placeholder="Autor" onkeyup="ValidirajUnos()"></td>
+				    <td><input type="text" name="author" id="author" placeholder="Autor" onkeyup="ValidirajUnos()" required></td>
 				   </tr>
 				   <tr>
 				    <td><label id="autorLabel"></label></td>

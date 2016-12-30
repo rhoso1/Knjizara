@@ -16,5 +16,10 @@ Tom prilikom će se upriličiti svečanost i pozivamo Vas da se odazovete u što
     <sadrzaj>Proba</sadrzaj>
     <autor>Proba</autor>
   </novost>
- 
+  <novost>
+    <naslov>proba Novost</naslov>
+    <sadrzaj>Proba za unos novosti</sadrzaj>
+    <autor>rhoso1</autor>
+  </novost>
+  
 </novosti>

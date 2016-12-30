@@ -36,7 +36,7 @@
                  }
            }
         }
-           echo $_prijedlog === "" ? "nema prijedloga" : $_prijedlog;
+           echo $_prijedlog === "" ? "" : $_prijedlog;
 	 }
 	 
 ?>

@@ -55,4 +55,10 @@
     <zanr>ProbamoValidaciju</zanr>
     <autor>ProbamoValidaciju</autor>
   </knjiga>
+  <knjiga>
+    <naslov>Proba</naslov>
+    <zanr>Proba</zanr>
+    <autor>Proba</autor>
+  </knjiga>
+  
 </knjige>

@@ -47,7 +47,7 @@ function Pretrazi()
    var _autor = document.getElementById( 'suggLabel2' );
    var pomN = _naslov.textContent;
    var pomA = _autor.textContent;
-   var rez = pomN.concat(pomA);
+   var rez = pomN + ', '+pomA;
    
    alert( rez );
    

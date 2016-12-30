@@ -56,7 +56,7 @@
 				    <td><label>Broj telefona: </label></td>
 				   </tr>
 				   <tr>
-				    <td><input type="tel" name="tel" id="txtTelefon" onkeyup="ValidirajTelefon()"></td>
+				    <td><input type="tel" name="tel" id="txtTelefon" onkeyup="ValidirajTelefon()" required></td>
 				   </tr>
 				   <tr>
 				    <td><label id="telefonLabel"></label></td>
