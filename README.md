@@ -112,7 +112,7 @@ Login.php - U ovom fajlu je omogućen Login za admina. Njegovi podaci se nalaze 
             Ukoliko uneseni username i passwordd odgovaraju podacima u xml-u Admin je uspješno logovan. U suprotnom, prijavljuje se                 greška.
 	    
 AdminOpcije.php - Ovaj fajl nudi opcije koje se nalaze u postavci spirale, a koje može izvršavati samo korisnik logovan kao admin
-MyPDF.php - 
+MyPDF.php - U ovom fajlu je omogućeno generisane pdf fajla koji je dostupan na podstranici "Knjige.php" , a koji sadrži spisak dostupnih knjiga u XML fajlu Knjige.xml
 AdminPodaci.xml - 
 UnosPodataka.php - 
 Novost.xml - 
