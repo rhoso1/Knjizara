@@ -85,3 +85,46 @@ AjaxInformacije.txt - Fajl koji sadrzi tekst koji se dodajem bez reload-a strani
 stil.css - U tom fajlu se nalazi definisan stil svih stranica.
 
 Kreirane stranice su i dalje responzivne i imaju grid-view izgled. Također, omogućen je izgled za mobilne uređaje pomoću media query-a 
+
+SPIRALA 3:
+
+1)
+Koristeći PHP napravljena je  serializacija podataka (Knjige i novosti) u XML fajlove. Također, omogućen je unos, izmjena (knjiga, ali ne i novosti), prikazivanje i brisanje podataka koji se nalaze u XML fajlovima.
+
+Svi podaci koji se unose u XML fajlove su  validirani kako u PHP-u, tako i u JS. Prilikom pisanja koda paženo je na XSS ranjivost napisanog koda. 
+
+Unos, izmjenu i brisanje podataka u/iz XML fajlova je u mogućnosti raditi samo korisnik koji je prijavljen kao admin čiji podaci (username i password)se nalazi u XML fajlu može raditi samo admin korisnik.
+2)
+Adminu je omogućeno download podataka(Spisak raspoloživih knjiga) u obliku csv fajla. Podaci koji se nalaze u csv fajlu su upisani iz XML fajla.
+3)
+Opcija generisanja izvještaja u obliku pdf fajla dostupna je svim korisnicima web stranice na podstranici "Knjige.php". Ovaj izvještaj sadrži spisak knjiga koje su dostupne u XML fajlu. Korištena je  fpdf biblioteka.
+4)
+Napravljena je pretraga podataka sa prijedlozima. Na podstranici "Knjige.php" nalazi se forma unutar koje postoji input za pretragu. Prilikom unosa, npr, sloga "St" pretražuje se polje naslov knjige i autor knjige i ispisuju se svi podaci iz XMLa koji zadovoljavaju uslov, odnoso, u naslovu knjige ili autoru posjeduju uneseni slog. Nakon klika na "Pretraži" prikazuju se svi podaci koji zadovoljavaju unesenu vrijednost inputa za pretragu. Dakle, pretraga je za dva polja (naslov i autor knjige).
+5)
+Napravljen je deployment stranice na OpenShift-u. Međutim, prilikom kreiranja računa i registracije nisam uspjela dobiti pristup, stavljena sam u listu čekanja, pa je deployment moje stranice urađen na račun od prijateljice.
+LINK: http://knjizara-ikarasofti1.rhcloud.com/Spirala3/Knjige.php
+OBRAZLOŽENJE: http://pokit.org/get/?412022e5e2d15060e74be0c7b8e242b2.jpg (nisam mogla kreirati svoj račun).
+
+SPISAK FAJLOVA:
+(u odnosu na prethodnu spiralu dodani su sljedeći fajlovi)
+
+Login.php - U ovom fajlu je omogućen Login za admina. Njegovi podaci se nalaze zapisani u XML fajlu pod nazivom "AdminPodaci.xml".
+            Ukoliko uneseni username i passwordd odgovaraju podacima u xml-u Admin je uspješno logovan. U suprotnom, prijavljuje se                 greška.
+	    
+AdminOpcije.php - Ovaj fajl nudi opcije koje se nalaze u postavci spirale, a koje može izvršavati samo korisnik logovan kao admin
+MyPDF.php - 
+AdminPodaci.xml - 
+UnosPodataka.php - 
+Novost.xml - 
+csvFile.csv - 
+Knjige.csv - 
+Knjige.xml - 
+UnosNovosti.php - 
+BrisanjeNovosti.php - 
+ajaxPretraga.js - 
+BrisanjeKnjige.php - 
+Prijedlog.php - 
+Prijedlog2.php - 
+UrediKnjige.php - 
+
+Kreirane stranice su i dalje responzivne i imaju grid-view izgled.
