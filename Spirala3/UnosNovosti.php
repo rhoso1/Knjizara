@@ -91,7 +91,7 @@
 	   
 	   <div class="red">
 	     <div class ="Kolona jedan">
-		   <form class="Novosti" action="UnosNovosti.php" method="post">
+		   <form class="Novosti" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 			     <table>
 				   <tr>
 				    <td><label id="nn">Unesite novost</label></td>

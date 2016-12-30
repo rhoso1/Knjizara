@@ -91,7 +91,7 @@
 	   
 	   <div class="red">
 	     <div class ="Kolona jedan">
-		   <form class="Podaci" action="UnosPodataka.php" method="post">
+		   <form class="Podaci" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 			     <table>
 				   <tr>
 				    <td><label>Unesite podatke:</label></td>

@@ -87,7 +87,7 @@
 	   
 	   <div class="red">
 	     <div class ="Kolona jedan">
-		   <form class="LoginForma" action="Login.php" method="post">
+		   <form class="LoginForma" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 			     <table>
 				   <tr>
 				    <td><label>Unesite podatke:</label></td>

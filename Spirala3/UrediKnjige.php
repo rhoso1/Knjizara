@@ -99,7 +99,7 @@
 	   
 	       <div class="red">
 	          <div class ="Kolona jedan">
-		        <form class="Brisanje" action="UrediKnjige.php" method="post">
+		        <form class="Brisanje" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 			      <table>
 				    <tr>
 				    <td><label>Naziv knjige:</label>

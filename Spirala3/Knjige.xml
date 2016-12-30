@@ -60,5 +60,9 @@
     <zanr>Proba</zanr>
     <autor>Proba</autor>
   </knjiga>
-  
+  <knjiga>
+    <naslov>proba</naslov>
+    <zanr>proba</zanr>
+    <autor>proba</autor>
+  </knjiga>
 </knjige>
