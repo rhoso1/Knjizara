@@ -30,14 +30,7 @@
                  }
                }
             $_XML->asXML('Knjige.xml');
-			}	
-			
-			//Modifikacija elemenata
-			if((isset($_POST['Uredi'])) && $_knjiga->naslov == $_POST['naslovKnjige'])
-			{
-                   
-			}
-                  
+			}	       
 		?>
        <div class="red">
 	     <div class="Kolona jedan">
@@ -81,16 +74,16 @@
 		        <form class="Brisanje" action="BrisanjeKnjige.php" method="post">
 			      <table>
 				    <tr>
-				    <td><label>Naziv knjige:</label><input type="text" class="urediInput" name="naslovKnjige" readonly="readonly" value="<?php echo $_knjiga->naslov ?>"></td>
+				    <td><label>Naziv knjige:</label><input type="text" class="urediInput" name="naslovKnjige" readonly="readonly"  value="<?php echo $_knjiga->naslov ?>"></td>
 				   </tr>
 				   <tr>
 				    <td><label>Žanr: </label><input type="text" class="urediInput" name="zanr" readonly="readonly" value="<?php echo $_knjiga->zanr ?>" ></td>
 				   </tr>
 				   <tr>
-				    <td><label>Autor: </label><input type="text" class="urediInput" name="author" readonly="readonly" value="<?php echo $_knjiga->autor ?>"></td>
+				    <td><label>Autor: </label><input type="text" class="urediInput" name="author" readonly="readonly"  value="<?php echo $_knjiga->autor ?>"></td>
 				   </tr>
 				   <tr>
-				    <td><input type="submit" value="Uredi" name="Uredi" class="BtnUredi"><input type="submit" value="Obriši" name="Obrisi" class="BtnObrisi"></td>
+				    <td><input type="submit" value="Obriši" name="Obrisi" class="BtnObrisi"></td>
 				   </tr>
 				 </table> 
                </form>

@@ -84,7 +84,7 @@
 				    <td><label>Autor: </label><input type="text" class="urediInput" name="autorNovosti" readonly="readonly" value="<?php echo $_novost->autor ?>"></td>
 				   </tr>
 				   <tr>
-				    <td><input type="submit" value="Uredi" name="Uredi" class="BtnUredi"><input type="submit" value="Obriši" name="Obrisi" class="BtnObrisi"></td>
+				    <td><input type="submit" value="Obriši" name="Obrisi" class="BtnObrisi"></td>
 				   </tr>
 				 </table> 
                </form>

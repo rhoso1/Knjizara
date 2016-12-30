@@ -7,14 +7,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/javascript" src="validacija.js"></script>
 	<script type="text/javascript" src="DropDown.js"></script>
+	<script type="text/javascript" src="ajaxPretraga.js"></script>
+
+	
    </HEAD>
+   
 <BODY>
+
 <?php 
      if(isset($_POST["pdfBtn"]))
 	 {
 		 header("Location: MyPDF.php");
 	 }
+	 
 ?>
+
      <div class="red">
 	     <div class="Kolona jedan">
 		    <h1 class="Naslov">eBook</h1>
@@ -86,19 +93,21 @@
 			   <form action="Knjige.php" method="post">
 			     <table class="Granica">
 				   <tr>
-				   <td><label class="Naziv">Unesite naziv knjige:</label><input class="UnesiText" type="text" name="Knjiga" id="InputKnjiga" onkeyup="ValidirajKnjigu()"></td>
+				   <td><label class="Naziv">Unos za pretragu:</label><input class="UnesiText" type="text" name="Knjiga" id="InputKnjiga" onkeyup="Pretraga(this.value)"></td>
 				   </tr>
 				   <tr>
-				   <td><label>Unestite ime autora:</label><input class="UnesiText" type="text" name="autor" id="autorKnjiga" onkeyup="ValidirajKnjigu()"></td>
+				   <td><p class="prijedlog">Prijedlog naslov:<span class="span" id="suggLabel"></span></p></td>
+				   </tr>
+				    <tr>
+				   <td><p class="prijedlog">Prijedlog autor:<span id="suggLabel2"></span></p></td>
 				   </tr>
 				   <tr>
-				   <td><input class="btnPotvrdi" type="submit" value="Pretraži" id="BtnKnjiga" onclick="Validiraj()"></td>
+				   <td><input class="btnPotvrdi" type="submit" name="PretraziBtn" value="Pretraži" id="BtnKnjiga" onclick="Pretrazi()"></td>
 				   </tr>
 				 </table> 
                </form>
 			</div>
 		 </div>	
-		
 	        <div class="red">
 			    <div class="Kolona jedan">
 				    <p class="kraj">Posjetite nas u ulici Zmaja od Bosne bb, Sarajevo.</p>

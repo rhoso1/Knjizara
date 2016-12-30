@@ -1,33 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <knjige>
   <knjiga>
-    <naslov>Zovem se Crvena</naslov>
-    <zanr>Roman</zanr>
-    <autor>Orhan Pamuk</autor>
-  </knjiga>
-  <knjiga>
     <naslov>Lovac na zmajeve</naslov>
-    <zanr>Roman</zanr>
+    <zanr>Roman, probamo urediti</zanr>
     <autor>Khaled Hosseini</autor>
   </knjiga>
   <knjiga>
     <naslov>Inferno</naslov>
-    <zanr>Roman</zanr>
+    <zanr>Roman, edit</zanr>
     <autor>Dan Brown</autor>
   </knjiga>
   <knjiga>
-    <naslov>Harry Potter - I dio</naslov>
-    <zanr>Roman, fantastika</zanr>
-    <autor>J. K. Rowling</autor>
-  </knjiga>
-  <knjiga>
-    <naslov>Harry Potter - II dio</naslov>
-    <zanr>Roman, fantastika</zanr>
-    <autor>J. K. Rowling</autor>
-  </knjiga>
-  <knjiga>
     <naslov>Crveno i crno</naslov>
-    <zanr>Roman</zanr>
+    <zanr>Roman,edit</zanr>
     <autor>Stendhal</autor>
   </knjiga>
   <knjiga>
@@ -36,18 +21,38 @@
     <autor>Lav Tolstoj</autor>
   </knjiga>
   <knjiga>
-    <naslov>proba</naslov>
-    <zanr>proba</zanr>
-    <autor>proba</autor>
+    <naslov>Starac i more</naslov>
+    <zanr>Roman</zanr>
+    <autor>Ernest Hemingway</autor>
   </knjiga>
   <knjiga>
-    <naslov>proba</naslov>
-    <zanr>proba</zanr>
-    <autor>proba</autor>
+    <naslov>Stranac</naslov>
+    <zanr>Roman</zanr>
+    <autor>Albert Camus</autor>
   </knjiga>
   <knjiga>
-    <naslov>probamo</naslov>
-    <zanr>probamo csv</zanr>
-    <autor>proba</autor>
+    <naslov>Don Kihot</naslov>
+    <zanr>Roman</zanr>
+    <autor>Miguel de Servantes</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Ljubav u doba kolere</naslov>
+    <zanr>Roman</zanr>
+    <autor>Gabrijel Garcia Marquez</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Patnje mladog Vertera</naslov>
+    <zanr>Roman</zanr>
+    <autor>Johan Wolfgang von Goethe</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Zovem se Crvena</naslov>
+    <zanr>Roman</zanr>
+    <autor>Orhan Pamuk</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>ProbamoValidaciju</naslov>
+    <zanr>ProbamoValidaciju</zanr>
+    <autor>ProbamoValidaciju</autor>
   </knjiga>
 </knjige>

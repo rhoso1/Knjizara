@@ -372,7 +372,7 @@ form.AdminForma{
 		         float:left;
 		         margin-left:35vw;
 	             width:30vw;
-		         height:35vw;
+		         height:38vw;
       }
 input.input{
      font-family:monotype corsiva;
@@ -391,7 +391,7 @@ form.Podaci{
 		         float:left;
 		         margin-left:35vw;
 	             width:30vw;
-		         height:47vw;
+		         height:52vw;
 }
 form.Prikaz{
 	             border:0.5vw double #330000;
@@ -412,6 +412,8 @@ input.urediInput{
 				   margin-top:1.5vw;
 				   font-family:monotype corsiva;
                    font-size:3vw;
+				   width:32vw;
+				   height:3.5vw;
 }
 textarea.urediInput{
 	               border:0vw solid black;
@@ -429,7 +431,18 @@ input.BtnUredi{
 				font-family:monotype corsiva;
                 font-size:2vw;
 				text-align:center;
-				margin-top:0.2vw;
+				margin-top:-0.5vw;
+				margin-left:38vw;
+	
+}
+input.BtnSacuvaj{
+            	background-color:#ffdd99;
+				width:7vw;
+				height:3vw;
+				font-family:monotype corsiva;
+                font-size:2vw;
+				text-align:center;
+				margin-top:-2.9vw;
 				margin-left:30vw;
 	
 }
@@ -440,7 +453,7 @@ input.BtnObrisi{
 				font-family:monotype corsiva;
                 font-size:2vw;
 				text-align:center;
-				margin-top:-3vw;
+				margin-top:-0.5vw;
 				margin-left:38vw;
 	
 }
@@ -465,7 +478,7 @@ form.Brisanje{
 		         float:left;
 		         margin-left:23vw;
 	             width:50vw;
-		         height:21vw;
+		         height:35vw;
 }
 h2.pocetnaStrana{
 	            font-family:monotype corsiva;
@@ -491,7 +504,7 @@ form.Novosti{
 		         float:left;
 		         margin-left:35vw;
 	             width:30vw;
-		         height:50vw;
+		         height:60vw;
 }
 input.nazadBtnNovost{
             	background-color:#ffdd99;
@@ -508,6 +521,20 @@ p.pdfParagraf{
 	            font-family:monotype corsiva;
                 font-size:2.5vw;
 				margin-left:5vw;
+}
+p.prijedlog {
+	            font-family:monotype corsiva;
+                font-size:1.5vw;
+				margin-left:5vw;
+}
+.selectOption{
+	                width:20vw;
+					height:3vw;
+				    font-family:monotype corsiva;
+                    font-size:2vw;
+					margin-top:1.5vw;
+					margin-left:1vw;
+					background-color:transparent;
 }
 
 @media screen and (max-width: 430px)
@@ -641,7 +668,7 @@ form.Forma{
 		border-radius:3vw;
 		margin-left:5vw;
 		width:80vw;
-		height:100%;
+		height:60vw;
       }
 label{
           font-size:10vw;

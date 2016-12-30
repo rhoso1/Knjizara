@@ -30,6 +30,7 @@ function Validiraj()
 		document.getElementById("BtnKnjiga").disabled=false;
 		document.getElementById("Input").innerHTML="";
 	}
+	
 }
 //Validacija forme na stranici Onama.html
 function ValidirajInput()
@@ -163,7 +164,7 @@ function ValidirajPodatke()
 	var _zanr=document.getElementById("zanr").value;
 	var _autor=document.getElementById("author").value;
 	
-	if(_naslov.length<=0 || _zanr.length<=0 || _author.length<=0)
+	if(_naslov.length<=0 || _zanr.length<=0 || _autor.length<=0)
 	{
 		document.getElementById("OKnovost").disabled=true;
 		document.getElementById("dugmeLabel").innerHTML="Popunite sva polja";
@@ -238,4 +239,68 @@ function ValidirajLogin()
 		document.getElementById("LogOk").disabled=false;
 		document.getElementById("loglabel").innerHTML="";
 	}	
+}
+//Ukoliko je neko polje za unos podataka prazno, onemogućen submit
+function ValidirajNovosti()
+{
+	var _naslov=document.getElementById("nNovost").value;
+	var _sadrzaj=document.getElementById("txtNovost").value;
+	var _autor=document.getElementById("aNovost").value;
+	
+	if(_naslov.length<=0 || _sadrzaj.length<=0 || _autor.length<=0)
+	{
+		document.getElementById("dodajNovost").disabled=true;
+		document.getElementById("dodajNovostLabel").innerHTML="Popunite sva polja";
+	}
+	else
+	{
+		document.getElementById("dodajNovost").disabled=false;
+		document.getElementById("dodajNovostLabel").innerHTML="";
+	}	
+}
+
+//Validacija polja za unos novosti
+function ValidirajUnosNovosti()
+{
+	//Unosi moraju biti duzi od 2 karaktera
+	var _naslov=document.getElementById("nNovost").value;
+	var _sadrzaj=document.getElementById("txtNovost").value;
+	var _autor=document.getElementById("aNovost").value;
+	
+	if(_naslov.value.length <= 2)
+	{
+		document.getElementById("dodajNovost").disabled=true;
+		document.getElementById("novostLabel").innerHTML="Duzina unosa mora biti veca od dva znaka";
+		tekst.focus;
+	}
+	else
+	{
+		document.getElementById("dodajNovost").disabled=false;
+		document.getElementById("novostLabel").innerHTML="";
+	}	
+	
+	if(_sadrzaj.value.length <= 2)
+	{
+		document.getElementById("dodajNovost").disabled=true;
+		document.getElementById("sadrzajLabel").innerHTML="Duzina unosa mora biti veca od dva znaka";
+		tekst.focus;
+	}
+	else
+	{
+		document.getElementById("dodajNovost").disabled=false;
+		document.getElementById("sadrzajLabel").innerHTML="";
+	}	
+	
+	if(_autor.value.length <= 2)
+	{
+		document.getElementById("dodajNovost").disabled=true;
+		document.getElementById("autorNovostiLabel").innerHTML="Duzina unosa mora biti veca od dva znaka";
+		tekst.focus;
+	}
+	else
+	{
+		document.getElementById("dodajNovost").disabled=false;
+		document.getElementById("autorNovostiLabel").innerHTML="";
+	}	
+	
 }

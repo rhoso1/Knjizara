@@ -91,7 +91,7 @@
 	   
 	   <div class="red">
 	     <div class ="Kolona jedan">
-		   <form class="Novosti" action="UnosNovosti.php" method="post">
+		   <form class="Novosti" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 			     <table>
 				   <tr>
 				    <td><label id="nn">Unesite novost</label></td>
@@ -100,7 +100,7 @@
 				    <td><label class="nn">Naslov novosti: </label></td>
 				   </tr>
 				   <tr>
-				    <td><input type="text" name="naslovNovosti" id="naslovNovosti" placeholder="Naslov"></td>
+				    <td><input type="text" name="naslovNovosti" id="nNovosti" placeholder="Naslov" onkeyup="ValidirajUnosNovosti()"></td>
 				   </tr>
 				   <tr>
 				    <td><label id="novostLabel"></label></td>
@@ -109,7 +109,7 @@
 				    <td><label class="nn">Sadržaj novosti: </label></td>
 				   </tr>
 				   <tr>
-				    <td><textarea rows="5" cols="35" name ="sadrzajNovosti" id="txtNovost" class="nn"></textarea></td>
+				    <td><textarea rows="5" cols="35" name ="sadrzajNovosti" id="txtNovost" class="nn" onkeyup="ValidirajUnosNovosti()"></textarea></td>
 				   </tr>
 				   <tr>
 				    <td><label id="sadrzajLabel"></td>
@@ -118,13 +118,13 @@
 				    <td><label class="nn">Autor: </label></td>
 				   </tr>
 				   <tr>
-				    <td><input type="text" name="autor" id="autorNovosti" placeholder="Autor"></td>
+				    <td><input type="text" name="autor" id="autorNovosti" placeholder="Autor" id="aNovost" onkeyup="ValidirajUnosNovosti()"></td>
 				   </tr>
 				   <tr>
 				    <td><label id="autorNovostiLabel"></label></td>
 				   </tr>
 				   <tr>
-				    <td><input type="submit" value="OK" name="BtnNovost" id="dodajNovost"></td>
+				    <td><input type="submit" value="OK" name="BtnNovost" id="dodajNovost" onclick="ValidirajNovosti()"></td>
 				   </tr>
 				    <td><label id="dodajNovostLabel"><?php echo $_msg ?></label></td> 
 					 <tr>

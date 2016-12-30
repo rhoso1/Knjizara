@@ -25,6 +25,10 @@
 			{
 			  header("Location: BrisanjeKnjige.php");
 			}
+			if(isset($_POST['BtnUredi']))
+			{
+			  header("Location: UrediKnjige.php");
+			}
 			
 			if(isset($_POST['BtnUnosNovosti']))
 			{
@@ -82,13 +86,16 @@
 				    <td><input type="submit" value="Unos knjige" name="BtnUnos" class="input"></td>
 				   </tr>
 				   <tr>
-				    <td><input type="submit" value="Obriši/Uredi knjige" name="BtnBrisanje" class="input"></td>
+				    <td><input type="submit" value="Obriši knjige" name="BtnBrisanje" class="input"></td>
+				   </tr>
+				    <tr>
+				    <td><input type="submit" value="Uredi knjige" name="BtnUredi" class="input"></td>
 				   </tr>
 				   <tr>
 				    <td><input type="submit" value="Unos novosti" name="BtnUnosNovosti" class="input"></td>
 				   </tr>
 				   <tr>
-				    <td><input type="submit" value="Obriši/Uredi novost" name="BtnBrisanjeNovosti" class="input"></td>
+				    <td><input type="submit" value="Obriši novost" name="BtnBrisanjeNovosti" class="input"></td>
 				   </tr>
 				   <tr>
 				    <td><input type="submit" value="Skini CSV" name="BtnCSV" class="input"></td>
