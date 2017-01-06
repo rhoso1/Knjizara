@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knjige>
+  <knjiga>
+    <naslov>Lovac na zmajeve</naslov>
+    <zanr>Roman, probamo urediti</zanr>
+    <autor>Khaled Hosseini</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Inferno</naslov>
+    <zanr>Roman, edit</zanr>
+    <autor>Dan Brown</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Crveno i crno</naslov>
+    <zanr>Roman,edit</zanr>
+    <autor>Stendhal</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Ana Karenjina</naslov>
+    <zanr>Roman</zanr>
+    <autor>Lav Tolstoj</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Starac i more</naslov>
+    <zanr>Roman</zanr>
+    <autor>Ernest Hemingway</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Stranac</naslov>
+    <zanr>Roman</zanr>
+    <autor>Albert Camus</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Don Kihot</naslov>
+    <zanr>Roman</zanr>
+    <autor>Miguel de Servantes</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Ljubav u doba kolere</naslov>
+    <zanr>Roman</zanr>
+    <autor>Gabrijel Garcia Marquez</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Patnje mladog Vertera</naslov>
+    <zanr>Roman</zanr>
+    <autor>Johan Wolfgang von Goethe</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Zovem se Crvena</naslov>
+    <zanr>Roman</zanr>
+    <autor>Orhan Pamuk</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>ProbamoValidaciju</naslov>
+    <zanr>ProbamoValidaciju</zanr>
+    <autor>ProbamoValidaciju</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>Proba</naslov>
+    <zanr>Proba</zanr>
+    <autor>Proba</autor>
+  </knjiga>
+  <knjiga>
+    <naslov>proba</naslov>
+    <zanr>proba</zanr>
+    <autor>proba</autor>
+  </knjiga>
+</knjige>
