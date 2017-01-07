@@ -8,4 +8,8 @@
     <grad>Sarajevo</grad>
     <adresa>Zmaja od Bosne, bb</adresa>
   </poslovnica>
+  <poslovnica>
+    <grad>Goražde</grad>
+    <adresa>Zaima Imamovića, bb</adresa>
+  </poslovnica>
 </poslovnice>

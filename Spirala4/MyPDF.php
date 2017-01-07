@@ -9,14 +9,18 @@
 	 $pdf->SetTextColor(128, 0, 0);
      $pdf->MultiCell(120,20,'Knjige koje mozete pronaci kod nas su:');
 
-     $_XML = simplexml_load_file("Knjige.xml");
-      foreach($_XML->knjiga as $_knjiga)
-      {
-		  $_ispis =" - ".$_knjiga->naslov.", ".$_knjiga->autor.";";
-		  $pdf->SetFont('Times','I',16);
-		  $pdf->SetTextColor(0, 0, 102);
-          $pdf->MultiCell(150,10,$_ispis);	
-	  }
+     $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
+ 
+          $sql = $baza->prepare("SELECT * FROM knjige");
+          $sql->execute();
+	   
+          while($rezultat = $sql->fetch(PDO::FETCH_ASSOC))
+		  {
+		   $_ispis =" - ". $rezultat['naslov'] . ", " . $rezultat['autor'] . ";";
+		   $pdf->SetFont('Times','I',16);
+		   $pdf->SetTextColor(0, 0, 102);
+           $pdf->MultiCell(150,10,$_ispis);	
+	      }
 
 	   ob_end_clean();
        $pdf->Output();

@@ -2,12 +2,17 @@
 	 
 	 $_nazivAutora[] = "";
 	 
-	 $_XML = simplexml_load_file("Knjige.xml");
-              
-              foreach($_XML->knjiga as $_knjiga)
-              {
-				  $_nazivAutora[] = $_knjiga->autor;
-			  }
+	  $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
+      $sql = $baza->prepare("SELECT * FROM knjige");
+      $sql->execute();
+
+		
+		while($rezultat = $sql->fetch(PDO::FETCH_ASSOC))
+		{
+	     
+     		 $_nazivAutora[] = $rezultat['autor'];
+			 
+	    }
 			  
 	 if(isset($_REQUEST["q"]))
 	 {

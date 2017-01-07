@@ -14,23 +14,27 @@
 		        if(isset($_POST['BtnNazadOpcije']))
 			    {
 			      header("Location: AdminOpcije.php");
-			    }
-				
-				//Briše knjigu koja odgovara button-u
-			if(isset($_POST['naslovKnjige']))
-			{				
-				 $_XML = simplexml_load_file("Knjige.xml");
-				
-				  foreach($_XML->knjiga as $_knjiga)
-                {
-                 if((isset($_POST['Obrisi'])) && $_knjiga->naslov == $_POST['naslovKnjige'])
-				 {
-                      $tmp = dom_import_simplexml($_knjiga);
-                      $tmp->parentNode->removeChild($tmp);
-                 }
-               }
-            $_XML->asXML('Knjige.xml');
-			}	       
+			    }    
+			
+			try
+			{
+                  $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
+                  $baza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			
+                  
+				  if(isset($_POST['Obrisi']) && isset($_POST['naslovKnjige']))
+				  {  
+					   	$sql = $baza->prepare("DELETE FROM knjige WHERE naslov='". $_POST['naslovKnjige'] ."'");
+	                    $sql->execute();
+				 }
+				  $baza = null;
+            }
+             catch(PDOException $e)
+            {
+               echo $e->getMessage();
+             }
+
+    
 		?>
        <div class="red">
 	     <div class="Kolona jedan">
@@ -64,23 +68,26 @@
 	   
 	   <?php 
 		    
-            $_XML = simplexml_load_file("Knjige.xml");
-              
-              foreach($_XML->knjiga as $_knjiga)
-              {
+            $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
+ 
+              $sql = $baza->prepare("SELECT * FROM knjige");
+              $sql->execute();
+	   
+              while($rezultat = $sql->fetch(PDO::FETCH_ASSOC))
+		   {
 			?>
 	       <div class="red">
 	          <div class ="Kolona jedan">
 		        <form class="Brisanje" action="BrisanjeKnjige.php" method="post">
 			      <table>
 				    <tr>
-				    <td><label>Naziv knjige:</label><input type="text" class="urediInput" name="naslovKnjige" readonly="readonly"  value="<?php echo $_knjiga->naslov ?>"></td>
+				    <td><label>Naziv knjige:</label><input type="text" class="urediInput" name="naslovKnjige" readonly="readonly"  value="<?php echo $rezultat['naslov']; ?>"></td>
 				   </tr>
 				   <tr>
-				    <td><label>Žanr: </label><input type="text" class="urediInput" name="zanr" readonly="readonly" value="<?php echo $_knjiga->zanr ?>" ></td>
+				    <td><label>Žanr: </label><input type="text" class="urediInput" name="zanr" readonly="readonly" value="<?php echo $rezultat['zanr']; ?>" ></td>
 				   </tr>
 				   <tr>
-				    <td><label>Autor: </label><input type="text" class="urediInput" name="author" readonly="readonly"  value="<?php echo $_knjiga->autor ?>"></td>
+				    <td><label>Autor: </label><input type="text" class="urediInput" name="author" readonly="readonly"  value="<?php echo $rezultat['autor']; ?>"></td>
 				   </tr>
 				   <tr>
 				    <td><input type="submit" value="Obriši" name="Obrisi" class="BtnObrisi"></td>

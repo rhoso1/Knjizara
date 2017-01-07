@@ -2,13 +2,15 @@
 //Upisivanje iz Knjige.xml u Knjige.csv
 session_start();
        
-	   $_XML = simplexml_load_file("Knjige.xml");
+	  $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
+      $sql = $baza->prepare("SELECT * FROM knjige");
+      $sql->execute();
 	   
 	   $_upis = fopen("Knjige.csv","w");
 		
-		foreach($_XML->knjiga as $_knjiga)
+		while($rezultat = $sql->fetch(PDO::FETCH_ASSOC))
 		{
-		  $_upisPodaci = $_knjiga->naslov . " / " . $_knjiga->zanr . " / " . $_knjiga->autor;
+		  $_upisPodaci = $rezultat['naslov'] . " / " . $rezultat['zanr'] . " / " . $rezultat['autor'];
 		  fputcsv($_upis,explode(',',$_upisPodaci));
 		}
 	fclose($_upis);
