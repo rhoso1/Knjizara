@@ -12,4 +12,8 @@
     <grad>Goražde</grad>
     <adresa>Zaima Imamovića, bb</adresa>
   </poslovnica>
+  <poslovnica>
+    <grad>Zenica</grad>
+    <adresa>Titova, bb</adresa>
+  </poslovnica>
 </poslovnice>

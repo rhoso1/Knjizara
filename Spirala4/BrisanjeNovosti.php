@@ -79,7 +79,7 @@
 			?>
 	       <div class="red">
 	          <div class ="Kolona jedan">
-		        <form class="Brisanje" action="BrisanjeNovosti.php" method="post">
+		        <form class="BrisanjeNovosti" action="BrisanjeNovosti.php" method="post">
 			      <table>
 				    <tr>
 				    <td><label>Naslov novosti:</label><input type="text" class="urediInput" name="naslovNovosti" readonly="readonly" value="<?php echo $rezultat['naslov']; ?>"></td>

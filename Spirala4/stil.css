@@ -484,6 +484,18 @@ form.Brisanje{
 		         float:left;
 		         margin-left:23vw;
 	             width:50vw;
+		         height:25vw;
+}
+form.BrisanjeNovosti{
+	             border:0.5vw double #330000;
+                 padding:1vw;
+                 background-color:transparent;
+				 background-repeat:no-repeat;
+                 background-attachment:fixed;
+		         border-radius:2vw;
+		         float:left;
+		         margin-left:23vw;
+	             width:50vw;
 		         height:31vw;
 }
 h2.pocetnaStrana{
