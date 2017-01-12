@@ -34,13 +34,21 @@
 				Validiraj($_POST['username']);
 				Validiraj($_POST['password']);
 				
-				$_XML = simplexml_load_file("AdminPodaci.xml");
-				if($_POST['username'] == $_XML->username && $_POST['password'] == $_XML->password)
-				{
-				   $_SESSION['LoginForma'] = true;
-				   $_msg="";
-				   $_OK = true;
-				}
+				$baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
+ 
+                 $sql = $baza->prepare("SELECT * FROM adminpodaci");
+                 $sql->execute();
+				 
+				 while($rezultat = $sql->fetch(PDO::FETCH_ASSOC))
+		          {
+				
+				    if($_POST['username'] == $rezultat['username'] && $_POST['password'] == $rezultat['password'])
+				    {
+				      $_SESSION['LoginForma'] = true;
+				      $_msg="";
+				       $_OK = true;
+				    }
+				  }
 			
 			  if(!$_OK)
 			  {	

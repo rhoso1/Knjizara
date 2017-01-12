@@ -34,13 +34,17 @@
 			{
 			  header("Location: BrisanjeNovosti.php");
 			}
-			if(isset($_POST['BtnCSV']))
-			{
-			  header("Location: csvFile.php");
-			}
 			if(isset($_POST['BtnPoslovnica']))
 			{
 			  header("Location: DodajPoslovnicu.php");
+			}
+			if(isset($_POST['BtnUrediKnjigu']))
+			{
+			  header("Location: UrediKnjige.php");
+			}
+			if(isset($_POST['BtnCSV']))
+			{
+			  header("Location: csvFile.php");
 			}
 			
 			//Upisivanje podataka iz XML fajlova u bazu na klik dugmeta
@@ -104,6 +108,9 @@
 				    <td><input type="submit" value="Poslovnica" name="BtnPoslovnica" class="input"></td>
 				   </tr>
 				   <tr>
+				    <td><input type="submit" value="Uredi knjige" name="BtnUrediKnjigu" class="input"></td>
+				   </tr>
+				   <tr>
 				    <td><input type="submit" value="Skini CSV" name="BtnCSV" class="input"></td>
 				   </tr>
 				   <tr>
@@ -116,6 +123,11 @@
                </form>
 		 </div>
 	   </div>
+  <div class="red">
+			    <div class="Kolona jedan">
+				    <p class="kraj">Posjetite nas u ulici Zmaja od Bosne bb, Sarajevo.</p>
+				</div>
+            </div>
   
 </BODY>
 </HTML>

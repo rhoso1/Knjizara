@@ -56,19 +56,6 @@
 		
 	 }
 			   
-        // $_XML = new SimpleXMLElement("Poslovnice.xml", null, true);
-		
-        // $_data = $_XML->addChild('poslovnica');
-        // $_data->addChild('grad', $_POST["grad"]);
-        // $_data->addChild('adresa', $_POST["adresa"]);
-        // $_XML->asXML('Poslovnice.xml');
-		
-		// //Formatiranje novosti u xml file-u
-		// $dom = new DOMDocument('1.0');
-        // $dom->preserveWhiteSpace = false;
-        // $dom->formatOutput = true;
-        // $dom->loadXML($_XML->asXML());
-        // $dom->save('Poslovnice.xml');
 	
 	
 	  
@@ -149,6 +136,11 @@
 		       </form>
 		    </div>
 	     </div>
+  <div class="red">
+			    <div class="Kolona jedan">
+				    <p class="kraj">Posjetite nas u ulici Zmaja od Bosne bb, Sarajevo.</p>
+				</div>
+            </div>
   
 </BODY>
 </HTML>

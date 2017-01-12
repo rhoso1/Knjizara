@@ -42,7 +42,7 @@
                    $baza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                    $sql = $baza->prepare("INSERT INTO knjige (poslovnice, naslov, zanr, autor) VALUES(?, ?, ?, ?)");
                    $sql->execute(array(
-				                       1,
+				                       $_POST["poslovnice"],
                                        $_POST["naslovKnjige"],
                                        $_POST["zanr"],
 									   $_POST["author"]
@@ -143,6 +143,29 @@
 				    <td><label id="autorLabel"></label></td>
 				   </tr>
 				   <tr>
+				    <td><label class="nn">Odaberite poslovnicu: </label></td>
+				   </tr>
+				   <tr>
+				    <td><label id="autorNovostiLabel"></label></td>
+				   </tr>
+				   <!-- Treba da ponudi poslovnice koje se nalaze u bazi -->
+				   <tr>
+				   <td>
+				   <select class="izaberiPoslovnicu" name="poslovnice">
+				    <?php 
+		    
+                        $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
+ 
+                        $sql = $baza->prepare("SELECT * FROM poslovnice");
+                        $sql->execute();
+	   
+                      while($rezultat = $sql->fetch(PDO::FETCH_ASSOC))
+		              {
+		        	?>
+                       <option value="<?php echo $rezultat['id']; ?>"><?php echo $rezultat['id']; ?></option>
+					   <?php } ?>
+                   </select>
+				   <tr>
 				    <td><input type="submit" value="OK" name="BtnOKnovost" id="OKnovost" onclick="ValidirajPodatke()"></td>
 				   </tr>
 				    <td><label id="dugmeLabel"><?php echo $_msg ?></label></td>
@@ -158,6 +181,12 @@
 		       </form>
 		    </div>
 	     </div>
+		 
+		 <div class="red">
+			    <div class="Kolona jedan">
+				    <p class="kraj">Posjetite nas u ulici Zmaja od Bosne bb, Sarajevo.</p>
+				</div>
+            </div>
   
 </BODY>
 </HTML>

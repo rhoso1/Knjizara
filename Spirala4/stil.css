@@ -367,7 +367,7 @@ form.LoginForma{
 form.AdminForma{
                  border:1vw double #330000;
                  padding:1vw;
-                 background-image:url("Slike/pozadinaForma.jpg");
+                 background-image:url("Slike/pozadinaaa.jpg");
 		         border-radius:2vw;
 		         float:left;
 		         margin-left:35vw;
@@ -391,7 +391,7 @@ form.Podaci{
 		         float:left;
 		         margin-left:35vw;
 	             width:30vw;
-		         height:52vw;
+		         height:57vw;
 }
 form.Prikaz{
 	             border:0.5vw double #330000;
@@ -532,7 +532,7 @@ input.nazadBtnNovost{
                 font-size:2vw;
 				text-align:center;
 				margin-top:6vw;
-				float:right;
+				margin-left:50vw;
 	
 }
 p.pdfParagraf{
@@ -576,6 +576,30 @@ form.prikazPoslovnice {
 		              margin-left:25vw;
 	                  width:47vw;
 		              height:20vw;
+}
+select.izaberiPoslovnicu {
+	                      width:22.3vw;
+						  height:2.9vw;
+						  border-radius:2vw;
+						  border:0.2vw solid black;
+						  margin-left:1vw;
+						  margin-top:-1.2vw;
+						  background-color:#ffdd99;
+						  
+}
+form.SQL {
+	      background-color:transparent;
+		  border:0.5vw double black;
+		  width:25vw;
+		  height:15vw;
+		  margin:auto;
+		  
+}
+input.SQL {
+	       width:13vw;
+		   margin-left:5vw;
+		   margin-top:2.5vw;
+		   padding:0.3vw;
 }
 
 @media screen and (max-width: 430px)

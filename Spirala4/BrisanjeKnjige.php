@@ -107,6 +107,12 @@
 		       </form>
 		    </div>
 	     </div>
+		 
+		 <div class="red">
+			    <div class="Kolona jedan">
+				    <p class="kraj">Posjetite nas u ulici Zmaja od Bosne bb, Sarajevo.</p>
+				</div>
+            </div>
   
 </BODY>
 </HTML>
