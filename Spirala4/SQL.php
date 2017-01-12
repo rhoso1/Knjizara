@@ -12,21 +12,20 @@
 
 <?php
        session_start();
-	   if(isset($_POST['BtnNazadOpcije']))
+	          if(isset($_POST['BtnNazadOpcije']))
 			    {
 			      header("Location: AdminOpcije.php");
-			    }    
-	   if(isset($_POST['WebServis']))
+			    }
+				
+             if(isset($_POST['Btnposlovnice']))
 			    {
-			      header("Location: REST.php");
-			    }    
-         try
-		        {
-                   $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
-                   $baza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			      try
+		          {
+                    $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
+                    $baza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	
 					
-                    //  Da prebaci sve poslovnice
+                      //  Da prebaci sve poslovnice
 		               $_XML = simplexml_load_file("Poslovnice.xml");
 
               
@@ -38,20 +37,93 @@
 							 
 							 if( $row = $sql->fetch() )
 							 {
-								 throw new Exception("Podaci postoje u bazi");
+								 throw new Exception("Poslovnice postoje u bazi");
 							 }
-	                      else 
-						  {
+							 
+	                         else 
+						     {
 						       $sql = $baza->prepare("INSERT INTO poslovnice (grad, adresa) VALUES(?, ?)");
                                $sql->execute(array(
                                                     $_poslovnica->grad,
 									                $_poslovnica->adresa
 						                          ));
 							  
-						  }
+						    }
 						   
 					   }
 
+					 $baza = null;
+				   }
+				
+				    catch(PDOException $e)
+                    {
+                       echo $e->getMessage();
+                    }
+					
+			        catch(Exception $e)
+			       {
+                     echo '<script type="text/javascript">alert("' . $e->getMessage() . '")</script>';
+                   }
+			    }	
+				
+				
+               if(isset($_POST['Btnknjige']))
+			    {
+			      
+                  try
+		          { 
+                    $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
+                    $baza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+			  
+			        //Da prebaci sve knjige
+			        $_XML = simplexml_load_file("Knjige.xml"); 
+			         
+					 foreach($_XML->knjiga as $_knjiga)
+                      {
+						 $sql = $baza->prepare("SELECT * FROM knjige WHERE naslov = '". $_knjiga->naslov ."' AND zanr = '". $_knjiga->zanr ."' AND autor = '". $_knjiga->autor ."' ");
+                         $sql->execute();
+							 
+							 if( $row = $sql->fetch() )
+							 {
+								 throw new Exception("Knjige postoje u bazi");
+							 }
+							 
+							 else
+							 {
+				               $sql = $baza->prepare("INSERT INTO knjige (poslovnice, naslov, zanr, autor) VALUES(?, ?, ?, ?)");
+                               $sql->execute(array(
+				                                    29, 
+                                                    $_knjiga->naslov,
+                                                    $_knjiga->zanr,
+									                $_knjiga->autor
+                                                   ));
+			                 }
+                  
+				       }
+					   
+					 $baza = null;
+				}
+				
+				catch(PDOException $e)
+               {
+                 echo $e->getMessage();
+               }
+			   
+			   catch(Exception $e)
+			   {
+                   echo '<script type="text/javascript">alert("' . $e->getMessage() . '")</script>';
+               }
+	   }
+	   
+       if(isset($_POST['Btnnovosti']))
+			    {
+			       try
+		           {
+                     $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
+                     $baza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	
+					
 			       //Da prebaci sve novosti
 			           $_XML = simplexml_load_file("Novost.xml"); 
 			           foreach($_XML->novost as $_novost)
@@ -61,43 +133,21 @@
 							 
 							 if( $row = $sql->fetch() )
 							 {
-								 throw new Exception("Podaci postoje u bazi");
+								 throw new Exception("Novosti postoje u bazi");
 							 }
 							 else
 							 {
 				               $sql = $baza->prepare("INSERT INTO novosti (poslovnice, naslov, sadrzaj, autor) VALUES(?, ?, ?, ?)");
                                $sql->execute(array(
-				                       1,
+				                       29,
                                        $_novost->naslov,
                                        $_novost->sadrzaj,
 									   $_novost->autor
                                       ));
 							 }
 			           }
-			  
-			    // // //Da prebaci sve knjige
-			      $_XML = simplexml_load_file("Knjige.xml"); 
-			       foreach($_XML->knjiga as $_knjiga)
-                     {
-						 $sql = $baza->prepare("SELECT * FROM knjige WHERE naslov = '". $_knjiga->naslov ."' AND zanr = '". $_knjiga->zanr ."' AND autor = '". $_knjiga->autor ."' ");
-                             $sql->execute();
-							 
-							 if( $row = $sql->fetch() )
-							 {
-								 throw new Exception("Podaci postoje u bazi");
-							 }
-							 else
-							 {
-				               $sql = $baza->prepare("INSERT INTO knjige (poslovnice, naslov, zanr, autor) VALUES(?, ?, ?, ?)");
-                               $sql->execute(array(
-				                                    1, 
-                                                    $_knjiga->naslov,
-                                                    $_knjiga->zanr,
-									                $_knjiga->autor
-                                                   ));
-			                 }
-                  
-				     }
+			
+			    
 					 $baza = null;
 				}
 				
@@ -105,11 +155,13 @@
                {
                  echo $e->getMessage();
                }
+			   
 			   catch(Exception $e)
 			   {
                    echo '<script type="text/javascript">alert("' . $e->getMessage() . '")</script>';
                }
-		
+		 }				
+       
       ?>
   <div class="red">
 	     <div class="Kolona jedan">
@@ -147,7 +199,13 @@
 		       <form class ="SQL" action="SQL.php" method="post">
 			     <table>
 				   <tr>
-		           <td><input type="submit" value="Servis" name="WebServis" class="SQL"></td>
+				   <td><input type="submit" value="Upiši poslovnice" name="Btnposlovnice" class="SQL"></td>
+				   </tr>
+				   <tr>
+				   <td><input type="submit" value="Upiši knjige" name="Btnknjige" class="SQL"></td>
+				   </tr>
+				   <tr>
+				   <td><input type="submit" value="Upiši novosti" name="Btnnovosti" class="SQL"></td>
 				   </tr>
 				   <tr>
 				   <td><input type="submit" value="Nazad" name="BtnNazadOpcije" class="SQL"></td>

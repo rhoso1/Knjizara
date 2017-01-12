@@ -46,6 +46,10 @@
 			{
 			  header("Location: csvFile.php");
 			}
+			if(isset($_POST['WebServis']))
+			{
+			  header("Location: WebServis.php");
+			}
 			
 			//Upisivanje podataka iz XML fajlova u bazu na klik dugmeta
 			if(isset($_POST['BtnSQL']))
@@ -115,6 +119,9 @@
 				   </tr>
 				   <tr>
 				    <td><input type="submit" value="SQL" name="BtnSQL" class="input"></td>
+				   </tr>
+				   <tr>
+		           <td><input type="submit" value="Web servis" name="WebServis" class="input"></td>
 				   </tr>
 				   <tr>
 				    <td><input type="submit" value="Odjava" name="BtnOdjava" class="input"></td>

@@ -7,17 +7,17 @@ $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1
 switch ($method) 
 {
   case 'GET':
-    $sql = $baza->prepare("SELECT * FROM poslovnice");
+    $sql = $baza->prepare("SELECT * FROM webservis");
           $sql->execute();
 	break;
 	
   case 'PUT':
-    $sql = $baza->prepare("UPDATE  poslovnice SET adresa = 'ZmajaOdBosne'");
+    $sql = $baza->prepare("UPDATE  webservis SET adresa = 'ZmajaOdBosne'");
     $sql->execute();
 	break;
 
   case 'POST':
-    $sql = $baza->prepare("INSERT INTO poslovnice (grad, adresa) VALUES(?, ?)");
+    $sql = $baza->prepare("INSERT INTO webservis (grad, adresa) VALUES(?, ?)");
     $sql->execute(array(
                          "WebServis",
 						 "WebServis"
@@ -25,12 +25,12 @@ switch ($method)
 	break;
 	
   case 'DELETE':
-    	$sql = $baza->prepare("DELETE FROM poslovnice WHERE grad='WebServs'");
+    	$sql = $baza->prepare("DELETE FROM webservis WHERE grad='WebServis'");
 	    $sql->execute();
 	break;
 }
 
-$rezultat = $baza->query("select * from poslovnice");
+$rezultat = $baza->query("select * from webservis");
 
 if (!$rezultat)
 	{

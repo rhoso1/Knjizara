@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2017 at 01:06 AM
+-- Generation Time: Jan 12, 2017 at 04:14 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -53,23 +53,24 @@ CREATE TABLE IF NOT EXISTS `knjige` (
   `autor` varchar(50) COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `poslovnice` (`poslovnice`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `knjige`
 --
 
 INSERT INTO `knjige` (`id`, `poslovnice`, `naslov`, `zanr`, `autor`) VALUES
-(1, 1, 'Lovac na zmajeve', 'Roman', 'Khaled Hosseini'),
-(2, 1, 'Inferno', 'Roman', 'Dan Brown'),
-(3, 1, 'Crveno i crno', 'Roman', 'Stendhal'),
-(4, 1, 'Ana Karenjina', 'Roman', 'Lav Tolstoj'),
-(5, 1, 'Starac i more', 'Roman', 'Ernest Hemingway'),
-(6, 1, 'Stranac', 'Roman', 'Albert Camus'),
-(7, 1, 'Don Kihot', 'Roman', 'Miguel de Servantes'),
-(8, 1, 'Ljubav u doba kolere', 'Roman', 'Gabrijel Garcia Marquez'),
-(9, 1, 'Patnje mladog Vertera', 'Roman', 'Johan Wolfgang von Goethe'),
-(10, 1, 'Zovem se Crvena', 'Roman', 'Orhan Pamuk');
+(1, 27, 'ProbamoBazu', 'ProbamoBazu', 'rhoso1'),
+(2, 29, 'Lovac na zmajeve', 'Roman, probamo urediti', 'Khaled Hosseini'),
+(3, 29, 'Inferno', 'Roman, edit', 'Dan Brown'),
+(4, 29, 'Crveno i crno', 'Roman,edit', 'Stendhal'),
+(5, 29, 'Ana Karenjina', 'Roman', 'Lav Tolstoj'),
+(6, 29, 'Starac i more', 'Roman', 'Ernest Hemingway'),
+(7, 29, 'Stranac', 'Roman', 'Albert Camus'),
+(8, 29, 'Don Kihot', 'Roman', 'Miguel de Servantes'),
+(9, 29, 'Ljubav u doba kolere', 'Roman', 'Gabrijel Garcia Marquez'),
+(10, 29, 'Patnje mladog Vertera', 'Roman', 'Johan Wolfgang von Goethe'),
+(11, 29, 'Zovem se Crvena', 'Roman', 'Orhan Pamuk');
 
 -- --------------------------------------------------------
 
@@ -85,17 +86,17 @@ CREATE TABLE IF NOT EXISTS `novosti` (
   `autor` varchar(50) COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `poslovnice` (`poslovnice`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `novosti`
 --
 
 INSERT INTO `novosti` (`id`, `poslovnice`, `naslov`, `sadrzaj`, `autor`) VALUES
-(1, 1, 'Novost', 'Otvaramo novu poslovnicu u Sarajevu.\nTom prilikom će se upriličiti svečanost i pozivamo Vas da se odazovete u što većem broju.', 'rhoso1'),
-(2, 1, 'Novost', 'Kod nas možete pronaći sve što Vam je potrebno za školu, kao i albumi, čestike i još mnogo toga.', 'rhoso1'),
-(3, 1, 'proba Novost', 'Proba za unos novosti', 'rhoso1'),
-(38, 14, 'probasql', 'probasql', 'probasql');
+(1, 27, 'Probamo unijeti u mysql', 'Probamo unijeti u bazu', 'rhoso1'),
+(2, 29, 'Novost', 'Otvaramo novu poslovnicu u Sarajevu.\nTom prilikom će se upriličiti svečanost i pozivamo Vas da se odazovete u što većem broju.', 'rhoso1'),
+(3, 29, 'Novost', 'Kod nas možete pronaći sve što Vam je potrebno za školu, kao i albumi, čestike i još mnogo toga.', 'rhoso1'),
+(4, 29, 'proba Novost', 'Proba za unos novosti', 'rhoso1');
 
 -- --------------------------------------------------------
 
@@ -108,22 +109,39 @@ CREATE TABLE IF NOT EXISTS `poslovnice` (
   `grad` varchar(50) COLLATE utf8_slovenian_ci NOT NULL,
   `adresa` varchar(50) COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `poslovnice`
 --
 
 INSERT INTO `poslovnice` (`id`, `grad`, `adresa`) VALUES
-(1, 'Mostar', 'ZmajaOdBosne'),
-(2, 'Mostar', 'Titova'),
-(14, 'Mostar', 'BezBroja'),
-(16, 'Sarajevo', 'ZmajaOdBosne'),
-(17, 'Zenica', 'ZmajaOdBosne'),
-(23, 'WebServis', 'ZmajaOdBosne'),
-(24, 'Proba', 'Proba'),
-(25, 'Sarajevo', 'Zmaja od Bosne, bb'),
-(26, 'Zenica', 'Titova, bb');
+(27, 'Proba', 'Proba'),
+(28, 'Sarajevo', 'Zmaja od Bosne, bb'),
+(29, 'Zenica', 'Titova, bb');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `webservis`
+--
+
+CREATE TABLE IF NOT EXISTS `webservis` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `grad` varchar(50) COLLATE utf8_slovenian_ci NOT NULL,
+  `adresa` varchar(50) COLLATE utf8_slovenian_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `webservis`
+--
+
+INSERT INTO `webservis` (`id`, `grad`, `adresa`) VALUES
+(1, 'Sarajevo', ' ZmajaOdBosne '),
+(2, 'Zenica', 'ZmajaOdBosne '),
+(3, 'Tuzla', 'ZmajaOdBosne'),
+(4, 'WebServis', 'ZmajaOdBosne');
 
 --
 -- Constraints for dumped tables

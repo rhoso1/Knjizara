@@ -372,7 +372,7 @@ form.AdminForma{
 		         float:left;
 		         margin-left:35vw;
 	             width:30vw;
-		         height:47vw;
+		         height:52vw;
       }
 input.input{
      font-family:monotype corsiva;
@@ -590,16 +590,30 @@ select.izaberiPoslovnicu {
 form.SQL {
 	      background-color:transparent;
 		  border:0.5vw double black;
-		  width:25vw;
-		  height:15vw;
+		  width:30vw;
+		  height:20vw;
+		  margin:auto;
+		  
+}
+
+form.Servis{
+	      background-color:transparent;
+		  border:0.5vw double black;
+		  width:30vw;
+		  height:11.5vw;
 		  margin:auto;
 		  
 }
 input.SQL {
-	       width:13vw;
-		   margin-left:5vw;
-		   margin-top:2.5vw;
-		   padding:0.3vw;
+	      font-family:monotype corsiva;
+          font-size:2vw;
+		  height:3vw;
+		  width:15vw;
+		  margin-left:6.5vw;
+		  margin-top:1.2vw;
+}
+input.SQL:hover{
+	             color:gray;
 }
 
 @media screen and (max-width: 430px)
