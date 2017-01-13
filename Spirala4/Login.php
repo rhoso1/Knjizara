@@ -23,17 +23,19 @@
 	   }
 	  $_msg = '';
 	  $_OK = false;
+	  $_username = '';
 	  
-	        if (isset($_POST['BtnOK']) && empty($_POST['username']) && empty($_POST['password']))
+	   if (isset($_POST['BtnOK']) && empty($_POST['username']) && empty($_POST['password']))
 			{
 				$_msg = 'Popunite sva polja';
 			}
-
-			if (isset($_POST['BtnOK']) && !empty($_POST['username']) && !empty($_POST['password'])) 
+	  
+	    if (isset($_POST['BtnOK']) && !empty($_POST['username']) && !empty($_POST['password'])) 
 			{
 				Validiraj($_POST['username']);
 				Validiraj($_POST['password']);
 				
+					
 				$baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
  
                  $sql = $baza->prepare("SELECT * FROM adminpodaci");
@@ -49,7 +51,7 @@
 				       $_OK = true;
 				    }
 				  }
-			
+				  
 			  if(!$_OK)
 			  {	
 					$_msg = 'Pogrešan username ili password';

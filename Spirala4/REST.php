@@ -4,11 +4,6 @@
 		
 		$baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
 		$baza->exec("Set names utf8");
-		
-		 $sql = $baza->query("SELECT * FROM webservis");
-		 $sql->execute();
-		 echo "Svi podaci iz baze:";
-		 echo json_encode($sql->fetchALL(PDO::FETCH_ASSOC),JSON_PRETTY_PRINT);
 		  
 		  function zag() 
 		 {
@@ -26,18 +21,15 @@
 		{ 
 		 $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
          $baza->exec("Set names utf8");
-		  
 		 
-			    if(isset($data["grad"]))
+			    if(isset($data["adresa"]))
 			     {
 					  try
 		                {
-                         $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
-                         $baza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-						 
-					     $sql = $baza->query("SELECT * FROM webservis WHERE grad= '" . $data['grad'] ."'");
+					     $sql = $baza->query("SELECT * FROM webservis WHERE adresa= '" . $data['adresa'] ."'");
 					     $sql->execute();
 						 echo "Nakon poziva get metode ispisu se podaci koji odgovaraju onim unesenim u URL:";
+						 echo "\r\n";
 					     echo json_encode($sql->fetchALL(PDO::FETCH_ASSOC),JSON_PRETTY_PRINT);
 					  
 					     $baza = null;

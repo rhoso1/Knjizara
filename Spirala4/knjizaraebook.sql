@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2017 at 04:14 PM
+-- Generation Time: Jan 13, 2017 at 10:30 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `knjige` (
   `autor` varchar(50) COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `poslovnice` (`poslovnice`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `knjige`
@@ -131,7 +131,7 @@ CREATE TABLE IF NOT EXISTS `webservis` (
   `grad` varchar(50) COLLATE utf8_slovenian_ci NOT NULL,
   `adresa` varchar(50) COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `webservis`
@@ -141,7 +141,11 @@ INSERT INTO `webservis` (`id`, `grad`, `adresa`) VALUES
 (1, 'Sarajevo', ' ZmajaOdBosne '),
 (2, 'Zenica', 'ZmajaOdBosne '),
 (3, 'Tuzla', 'ZmajaOdBosne'),
-(4, 'WebServis', 'ZmajaOdBosne');
+(4, 'WebServis', 'ZmajaOdBosne'),
+(6, 'Sarajevo', 'Titova'),
+(7, 'Zenica', 'Titova'),
+(8, 'Sarajevo', 'NekaAdresa'),
+(9, 'Zenica', 'NekaAdresa');
 
 --
 -- Constraints for dumped tables
