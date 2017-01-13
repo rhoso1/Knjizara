@@ -41,7 +41,7 @@
            $baza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		   
 		 
-                $sql = $baza->prepare("INSERT INTO poslovnice (grad, adresa) VALUES(?, ?)");
+                  $sql = $baza->prepare("INSERT INTO poslovnice (grad, adresa) VALUES(?, ?)");
                   $sql->execute(array(
                                        $_POST["grad"],
                                        $_POST["adresa"]
