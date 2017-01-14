@@ -218,9 +218,14 @@ Ukoliko Ste logovani kao administrator u opcijama će Vam se ponuditi dugme "Web
 
 f) 
 Koristeći Postman testirala sam napisani web servis i u nastavku je priložen screenshot različitih slučajeva upotrebe:
+http://pokit.org/get/?05ac2701017e14335af71cb4d3f3cac9.jpg
+
 http://pokit.org/get/?a0387e6809d811272f975c29908248b8.jpg
+
 http://pokit.org/get/?569cf4b7f91e8f3361e01f90236c5b51.jpg
+
 http://pokit.org/get/?91ecb756e7aaeab739046817a195abf4.jpg
+
 http://pokit.org/get/?b843b4e6503f560521e213c8ab29f1c1.jpg
 
 FAJLOVI
