@@ -2,7 +2,7 @@
         
 		session_start();
 		
-		 $baza = new PDO("mysql:dbname=baza;host=localhost","rhoso1","rhoso1");
+		$baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
 		$baza->exec("Set names utf8");
 		  
 		  function zag() 
@@ -19,7 +19,7 @@
 		
 		function rest_get($request, $data)
 		{ 
-		  $baza = new PDO("mysql:dbname=baza;host=localhost","rhoso1","rhoso1");
+		 $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
          $baza->exec("Set names utf8");
 		 
 			    if(isset($data["adresa"]))
@@ -40,21 +40,12 @@
                           echo $e->getMessage();
                          }
 		             }
-					 
-					 else
-					 {
-						 $sql = $baza->query("SELECT * FROM webservis");
-					     $sql->execute();
-						 echo "Podaci u bazi:";
-						 echo "\r\n";
-					     echo json_encode($sql->fetchALL(PDO::FETCH_ASSOC),JSON_PRETTY_PRINT);
-					 }
 		}
       
 		
 		function rest_post($request, $data)
 		{
-			 $baza = new PDO("mysql:dbname=baza;host=localhost","rhoso1","rhoso1");
+			$baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
             $baza->exec("Set names utf8");
 			
 			$sql = $baza->prepare("INSERT INTO webservis (grad, adresa) VALUES(?, ?)");

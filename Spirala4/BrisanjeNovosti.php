@@ -19,7 +19,7 @@
 				//Briše knjigu koja odgovara button-u
 			try
 			{
-                   $baza = new PDO("mysql:dbname=baza;host=mysql-55-centos7","rhoso1","rhoso1");
+                  $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
                   $baza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			
                   
@@ -69,7 +69,7 @@
 	   <?php 
 		    
              
-             $baza = new PDO("mysql:dbname=baza;host=mysql-55-centos7","rhoso1","rhoso1");
+            $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
  
               $sql = $baza->prepare("SELECT * FROM novosti");
               $sql->execute();
