@@ -38,7 +38,7 @@
 			   
 			   try
 		        {
-                   $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
+                    $baza = new PDO("mysql:dbname=baza;host=mysql-55-centos7;charset=utf8","rhoso1","rhoso1");
                    $baza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                    $sql = $baza->prepare("INSERT INTO knjige (poslovnice, naslov, zanr, autor) VALUES(?, ?, ?, ?)");
                    $sql->execute(array(
@@ -154,7 +154,7 @@
 				   <select class="izaberiPoslovnicu" name="poslovnice">
 				    <?php 
 		    
-                        $baza = new PDO("mysql:dbname=knjizaraebook;host=localhost;charset=utf8","rhoso1","rhoso1");
+                         $baza = new PDO("mysql:dbname=baza;host=mysql-55-centos7;charset=utf8","rhoso1","rhoso1");
  
                         $sql = $baza->prepare("SELECT * FROM poslovnice");
                         $sql->execute();
