@@ -212,7 +212,8 @@ Sve php skripte koje su radile sa XML fajlovima sada rade sa bazom podataka, a t
 
 d)
 Link na OpenShiftu:
-
+Ja sam uradila hosting stranice na openshift. Međutim iako je baza dodana po svim uputama i bez ikakvih errora, a stranici se javlja greska pri radu sa bazom.
+http://knjizarawt-knjizarawt.44fs.preview.openshiftapps.com/Pocetna.php
 e) 
 Ukoliko Ste logovani kao administrator u opcijama će Vam se ponuditi dugme "WebServis". Ukoliko kliknete na to dugme pojavit će Vam se forma sa izborom da li želite da Vam se podaci ispišu u JSON formatu i da se vratite nazad na opcije admina. Ukoliko kliknete na dugme JSON format izvršava se "REST.php" skripta unutar koje je implementirana GET metoda REST web servisa koja vraća podatke u obliku JSON-a.
 
