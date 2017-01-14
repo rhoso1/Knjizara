@@ -40,7 +40,7 @@
 	   </div>
 	   
 		    <?php
-               $baza = new PDO("mysql:dbname=baza;host=mysql-55-centos7;charset=utf8","root","");
+               $baza = new PDO("mysql:dbname=baza;host=mysql-55-centos7","rhoso1","rhoso1");
  
               $sql = $baza->prepare("SELECT * FROM novosti");
               $sql->execute();

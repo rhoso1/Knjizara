@@ -2,7 +2,7 @@
         
 		session_start();
 		
-		 $baza = new PDO("mysql:dbname=baza;host=mysql-55-centos7;charset=utf8","rhoso1","rhoso1");
+		 $baza = new PDO("mysql:dbname=baza;host=localhost","rhoso1","rhoso1");
 		$baza->exec("Set names utf8");
 		  
 		  function zag() 
@@ -19,7 +19,7 @@
 		
 		function rest_get($request, $data)
 		{ 
-		  $baza = new PDO("mysql:dbname=baza;host=mysql-55-centos7;charset=utf8","rhoso1","rhoso1");
+		  $baza = new PDO("mysql:dbname=baza;host=localhost","rhoso1","rhoso1");
          $baza->exec("Set names utf8");
 		 
 			    if(isset($data["adresa"]))
@@ -54,7 +54,7 @@
 		
 		function rest_post($request, $data)
 		{
-			 $baza = new PDO("mysql:dbname=baza;host=mysql-55-centos7;charset=utf8","rhoso1","rhoso1");
+			 $baza = new PDO("mysql:dbname=baza;host=localhost","rhoso1","rhoso1");
             $baza->exec("Set names utf8");
 			
 			$sql = $baza->prepare("INSERT INTO webservis (grad, adresa) VALUES(?, ?)");
