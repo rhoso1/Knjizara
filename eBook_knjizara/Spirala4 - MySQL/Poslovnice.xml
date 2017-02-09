@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<poslovnice>
+  <poslovnica>
+    <grad>Proba</grad>
+    <adresa>Proba</adresa>
+  </poslovnica>
+  <poslovnica>
+    <grad>Sarajevo</grad>
+    <adresa>Zmaja od Bosne, bb</adresa>
+  </poslovnica>
+  <poslovnica>
+    <grad>Zenica</grad>
+    <adresa>Titova, bb</adresa>
+  </poslovnica>
+</poslovnice>
